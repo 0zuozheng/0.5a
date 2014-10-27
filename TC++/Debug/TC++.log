@@ -1,82 +1,17 @@
-﻿生成启动时间为 2014/10/3 10:02:59。
-     1>项目“E:\00.DTFS\3D_prog\v0.5a - Eg2\TC++\TC++.vcxproj”在节点 2 上(rebuild 个目标)。
-     1>_PrepareForClean:
-         正在删除文件“Debug\TC++.lastbuildstate”。
-       InitializeBuildStatus:
+﻿生成启动时间为 2014/10/27 19:45:34。
+     1>项目“E:\00.DTFS\3D_prog\v0.5a - Eg2\TC++\TC++.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
          正在创建“Debug\TC++.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _CRT_SECURE_NO_DEPRECATE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt 21.LibraryNormal.cpp 51.Boundary.cpp 40.Assembly.cpp 10.DataRead.cpp 20.ElementAnalysis.cpp 01.File.cpp 25.ElementParameter.cpp 42.StiffMatrix.cpp 11.iniArray.cpp 32.Judge.cpp 33.Interpolate.cpp 12.Assign.cpp 13.Keyword.cpp Main.cpp 30.GeometryAnalysis.cpp Matrix.cpp 41.ReadStep.cpp Result.cpp 50.Solve.cpp 31.Rotate.cpp 60.Tecplot.cpp 43.TFace.cpp Tool.cpp 02.Variable.cpp 00.Version.cpp 14.Warning.cpp 61.Write.cpp
-         61.Write.cpp
-         14.Warning.cpp
-         00.Version.cpp
-         02.Variable.cpp
-         Tool.cpp
-         43.TFace.cpp
-         60.Tecplot.cpp
-         31.Rotate.cpp
-         50.Solve.cpp
-         Result.cpp
-         41.ReadStep.cpp
-         Matrix.cpp
-         30.GeometryAnalysis.cpp
-         Main.cpp
-         13.Keyword.cpp
-     1>e:\00.dtfs\3d_prog\v0.5a - eg2\tc++\13.keyword.cpp(13): warning C4018: “<”: 有符号/无符号不匹配
-         12.Assign.cpp
-         33.Interpolate.cpp
-         32.Judge.cpp
-         11.iniArray.cpp
-         42.StiffMatrix.cpp
-         正在生成代码...
-         正在编译...
-         25.ElementParameter.cpp
-         01.File.cpp
-         20.ElementAnalysis.cpp
-         10.DataRead.cpp
-     1>e:\00.dtfs\3d_prog\v0.5a - eg2\tc++\10.dataread.cpp(135): warning C4305: “=”: 从“double”到“float”截断
-         40.Assembly.cpp
-     1>e:\00.dtfs\3d_prog\v0.5a - eg2\tc++\40.assembly.cpp(85): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-         51.Boundary.cpp
-         21.LibraryNormal.cpp
-         正在生成代码...
-     1>e:\00.dtfs\3d_prog\v0.5a - eg2\tc++\40.assembly.cpp(79): warning C4715: “TimeInter”: 不是所有的控件路径都返回值
+         所有输出均为最新。
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\00.DTFS\3D_prog\v0.5a - Eg2\Debug\TC++.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\TC++.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\00.DTFS\3D_prog\v0.5a - Eg2\Debug\TC++.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\00.DTFS\3D_prog\v0.5a - Eg2\Debug\TC++.lib" /MACHINE:X86 Debug\21.LibraryNormal.obj
-         Debug\51.Boundary.obj
-         Debug\40.Assembly.obj
-         Debug\10.DataRead.obj
-         Debug\20.ElementAnalysis.obj
-         Debug\01.File.obj
-         Debug\25.ElementParameter.obj
-         Debug\42.StiffMatrix.obj
-         Debug\11.iniArray.obj
-         Debug\32.Judge.obj
-         Debug\33.Interpolate.obj
-         Debug\12.Assign.obj
-         Debug\13.Keyword.obj
-         Debug\Main.obj
-         Debug\30.GeometryAnalysis.obj
-         Debug\Matrix.obj
-         Debug\41.ReadStep.obj
-         Debug\Result.obj
-         Debug\50.Solve.obj
-         Debug\31.Rotate.obj
-         Debug\60.Tecplot.obj
-         Debug\43.TFace.obj
-         Debug\Tool.obj
-         Debug\02.Variable.obj
-         Debug\00.Version.obj
-         Debug\14.Warning.obj
-         Debug\61.Write.obj
-         "C:\Program Files (x86)\VNI\imsl\cnl700\winms800i32\lib\imslcmath_imsl_dll.lib"
+         所有输出均为最新。
          TC++.vcxproj -> E:\00.DTFS\3D_prog\v0.5a - Eg2\Debug\TC++.exe
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"E:\00.DTFS\3D_prog\v0.5a - Eg2\Debug\TC++.exe;#1" /manifest Debug\TC++.exe.intermediate.manifest
        FinalizeBuildStatus:
          正在删除文件“Debug\TC++.unsuccessfulbuild”。
          正在对“Debug\TC++.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“E:\00.DTFS\3D_prog\v0.5a - Eg2\TC++\TC++.vcxproj”(rebuild 个目标)的操作。
+     1>已完成生成项目“E:\00.DTFS\3D_prog\v0.5a - Eg2\TC++\TC++.vcxproj”(build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:07.68
+已用时间 00:00:00.10

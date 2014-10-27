@@ -1,13 +1,13 @@
 
-；BoundsChecker 创建的文件。
-;版本 11.2.0 (Build 555)
+;File created by BoundsChecker.
+;Version 10.0.0 (Build 714)
 
-；不编辑。
+;Do Not Edit.
 
-; C:\Program Files (x86)\Common Files\Micro Focus\NMShared\5.8\wcore.dll Version = 5.8.89.0
-; C:\Program Files (x86)\Common Files\Micro Focus\NMShared\5.8\nmaedfd.dll Version = N/A
-; C:\Program Files (x86)\Common Files\Micro Focus\NMShared\5.8\nmaedf.dll Version = 5.8.28.0
-; C:\Program Files (x86)\Micro Focus\DevPartner Studio\BoundsChecker\wssmemorytrack.dll Version = 11.2.0 (Build 555)
+; C:\Program Files (x86)\Common Files\Micro Focus\NMShared\5.0\wcore.dll Version = 5.0.271.0
+; C:\Program Files (x86)\Common Files\Micro Focus\NMShared\5.0\nmaedfd.dll Version = N/A
+; C:\Program Files (x86)\Common Files\Micro Focus\NMShared\5.0\nmaedf.dll Version = 5.0.1946.0
+; C:\Program Files (x86)\Micro Focus\DevPartner Studio\BoundsChecker\wssmemorytrack.dll Version = 10.0.0 (Build 714)
 
 [Root]
 
@@ -127,24 +127,22 @@ C:\Windows\AppPatch=2
 C:\Windows\SysWOW64=2
 C:\Windows\Assembly=2
 C:\Windows\Microsoft.NET\Framework=2
-C:\Windows\Microsoft.Net\Assembly=2
 C:\Windows\Microsoft.NET\Framework64=2
+C:\Windows\Microsoft.Net\Assembly=2
 
 [Fonts and Colors]
 
 [WCore]
 DynamicNlbFiles=1
-HookReturnedInterfaces=0
 CommandLineArguments=
 MaxAllocCallStackDepth=5
 PromptToSave=0
 Search Path=E:\00.DTFS\3D_prog\v0.5a - Eg2\Debug\;E:\00.DTFS\3D_prog\v0.5a - Eg2\Debug;.;..
-CaptureAllocationStacksRaw=0
 EnablePopup=1
-UseIsBadReadPtr=0
 MaxCallStackDepth=20
 NlbFileDir=E:\00.DTFS\3D_prog\v0.5a - Eg2\Debug\
 DisplayPopup=Always
+WorkingDirectory=E:\00.DTFS\3D_prog\v0.5a - Eg2\Debug\
 SymbolPath=
 
 [WCore Fake Stuff]
@@ -179,28 +177,28 @@ ComSvcs.DLL=2
 ole32.DLL=2
 NTDLL.DLL=2
 msado15.DLL=2
-XOLEHLP.DLL=2
 HTTPAPI.DLL=2
+XOLEHLP.DLL=2
 wtsapi32.DLL=2
 DBMSSOCN.DLL=2
 mswsock.DLL=2
-shlwapi.DLL=2
 User32.DLL=2
+shlwapi.DLL=2
 comdlg32.DLL=2
 SSNETLIB.DLL=2
-OLEPRO32.DLL=2
 MTXEX.DLL=2
+OLEPRO32.DLL=2
 d3dx9d.DLL=2
 url.DLL=2
 Crypt32.DLL=2
 MSVBVM60.DLL=2
-IPHLPAPI.DLL=2
 DINPUT.DLL=2
+IPHLPAPI.DLL=2
 glu32.DLL=2
 opengl32.DLL=2
 ACTIVDBG.DLL=2
-RPCRT4.DLL=2
 MSVBVM50.DLL=2
+RPCRT4.DLL=2
 uxtheme.DLL=2
 version.DLL=2
 msrating.DLL=2
@@ -213,10 +211,10 @@ mpr.DLL=2
 ComCtl32.DLL=2
 ws2_32.DLL=2
 SHDOCVW.DLL=2
-HLINK.DLL=2
 ACTIVSCP.DLL=2
-shell32.DLL=2
+HLINK.DLL=2
 secur32.DLL=2
+shell32.DLL=2
 ApiModules=2
 wininet.DLL=2
 OleAut32.DLL=2
@@ -257,16 +255,12 @@ LogDotNetCheck=3
 [BC MemoryTracker]
 StrictRealloc=1
 GuardByte=FC
-StartFinalcheckTraceAt=0
-TrackAllBlocks=0
 PoisonByte=FD
-EnableStructureMemberEnumeration=0
 UninitMemCheckBasic=1
 EnableLeaksOnly=0
-LogTraceFile=
+EnableMemoryUpdate=0
 FillByte=FB
 EnableFinalCheck=1
-FinalcheckTrace=0
 EnableNestedLeak=0
 PoisonOnFree=1
 EnableBSTRTracking=1
@@ -275,9 +269,7 @@ FillFlag=1
 EnableMemoryTrack=1
 GuardByteCount=4
 UninitMinCheck=2
-FillLocalVariables=1
 ShowMRVOnExit=0
-ForgetUserPointers=1
 HeapExamine=1
 
 [Resource Track]
@@ -311,7 +303,6 @@ Cat_Flags_Enums_Ranges=1
 EnableMemValidation=0
 NotImpl=1
 FillByte=FE
-ReportFillByteWrite=0
 EnableStaticHooks=1
 ApiInvArg=1
 EnableValidation=0
