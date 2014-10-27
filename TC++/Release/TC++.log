@@ -1,0 +1,82 @@
+﻿生成启动时间为 2014/9/14 9:57:52。
+     1>项目“E:\00.DTFS\3D_prog\v0.5a - Eg1\TC++\TC++.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“Release\TC++.lastbuildstate”。
+       InitializeBuildStatus:
+         正在创建“Release\TC++.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oy- /GL /D _MBCS /D _MBCS /D _CRT_SECURE_NO_DEPRECATE /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt 21.LibraryNormal.cpp 51.Boundary.cpp 40.Assembly.cpp 10.DataRead.cpp 20.ElementAnalysis.cpp 01.File.cpp 25.ElementParameter.cpp 42.StiffMatrix.cpp 11.iniArray.cpp 32.Judge.cpp 33.Interpolate.cpp 12.Assign.cpp 13.Keyword.cpp Main.cpp 30.GeometryAnalysis.cpp Matrix.cpp 41.ReadStep.cpp Result.cpp 50.Solve.cpp 31.Rotate.cpp 60.Tecplot.cpp 43.TFace.cpp Tool.cpp 02.Variable.cpp 00.Version.cpp 14.Warning.cpp 61.Write.cpp
+         21.LibraryNormal.cpp
+         51.Boundary.cpp
+         40.Assembly.cpp
+     1>40.Assembly.cpp(80): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+         10.DataRead.cpp
+     1>10.DataRead.cpp(130): warning C4305: “=”: 从“double”到“float”截断
+         20.ElementAnalysis.cpp
+         01.File.cpp
+         25.ElementParameter.cpp
+         42.StiffMatrix.cpp
+         11.iniArray.cpp
+         32.Judge.cpp
+         33.Interpolate.cpp
+         12.Assign.cpp
+         13.Keyword.cpp
+     1>13.Keyword.cpp(13): warning C4018: “<”: 有符号/无符号不匹配
+         Main.cpp
+         30.GeometryAnalysis.cpp
+         Matrix.cpp
+         41.ReadStep.cpp
+         Result.cpp
+         50.Solve.cpp
+         31.Rotate.cpp
+         正在编译...
+         60.Tecplot.cpp
+         43.TFace.cpp
+         Tool.cpp
+         02.Variable.cpp
+         00.Version.cpp
+         14.Warning.cpp
+         61.Write.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\00.DTFS\3D_prog\v0.5a - Eg1\Release\TC++.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\TC++.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\00.DTFS\3D_prog\v0.5a - Eg1\Release\TC++.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\00.DTFS\3D_prog\v0.5a - Eg1\Release\TC++.lib" /MACHINE:X86 Release\21.LibraryNormal.obj
+         Release\51.Boundary.obj
+         Release\40.Assembly.obj
+         Release\10.DataRead.obj
+         Release\20.ElementAnalysis.obj
+         Release\01.File.obj
+         Release\25.ElementParameter.obj
+         Release\42.StiffMatrix.obj
+         Release\11.iniArray.obj
+         Release\32.Judge.obj
+         Release\33.Interpolate.obj
+         Release\12.Assign.obj
+         Release\13.Keyword.obj
+         Release\Main.obj
+         Release\30.GeometryAnalysis.obj
+         Release\Matrix.obj
+         Release\41.ReadStep.obj
+         Release\Result.obj
+         Release\50.Solve.obj
+         Release\31.Rotate.obj
+         Release\60.Tecplot.obj
+         Release\43.TFace.obj
+         Release\Tool.obj
+         Release\02.Variable.obj
+         Release\00.Version.obj
+         Release\14.Warning.obj
+         Release\61.Write.obj
+         "C:\Program Files (x86)\VNI\imsl\cnl700\winms800i32\lib\imslcmath_imsl_dll.lib"
+         正在生成代码
+     1>e:\00.dtfs\3d_prog\v0.5a - eg1\tc++\40.assembly.cpp(74): warning C4715: “TimeInter”: 不是所有的控件路径都返回值
+         已完成代码的生成
+         TC++.vcxproj -> E:\00.DTFS\3D_prog\v0.5a - Eg1\Release\TC++.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"E:\00.DTFS\3D_prog\v0.5a - Eg1\Release\TC++.exe;#1" /manifest Release\TC++.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         正在删除文件“Release\TC++.unsuccessfulbuild”。
+         正在对“Release\TC++.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“E:\00.DTFS\3D_prog\v0.5a - Eg1\TC++\TC++.vcxproj”(rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:04.94

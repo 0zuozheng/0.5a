@@ -1,0 +1,169 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/Viewer Release 6.12-1 replay file
+# Internal Version: 2012_03_13-20.23.18 119612
+# Run by Zuo on Fri Sep 12 17:41:19 2014
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=172.605361938477, 
+    height=276.266662597656)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from viewerModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+o2 = session.openOdb(name='job.odb')
+#: Model: E:/00.DTFS/3D_prog/v0.5a - Eg1/debug/abq/job.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       4
+#: Number of Node Sets:          2
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o2)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='NT11', outputPosition=NODAL, )
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(
+    plotState=CONTOURS_ON_DEF)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=0 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=1 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=6 )
+odb = session.odbs['E:/00.DTFS/3D_prog/v0.5a - Eg1/debug/abq/job.odb']
+xyList = xyPlot.xyDataListFromField(odb=odb, outputPosition=NODAL, variable=((
+    'NT11', NODAL), ), nodeLabels=(('PART-1-1', ('31', )), ))
+xyp = session.XYPlot('XYPlot-1')
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+curveList = session.curveSet(xyData=xyList)
+chart.setValues(curvesToPlot=curveList)
+session.viewports['Viewport: 1'].setValues(displayedObject=xyp)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='HFL', outputPosition=INTEGRATION_POINT, refinement=(
+    INVARIANT, 'Magnitude'), )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='NT11', outputPosition=NODAL, )
+session.xyPlots['XYPlot-1'].setValues(transform=(0.64198, -0.334715, -0.689803, 
+    116.258, 0.494192, 0.8685, 0.0385053, -90.1246, 0.586205, -0.365614, 
+    0.722973, -82.0567, 0, 0, 0, 1))
+session.xyPlots['XYPlot-1'].setValues(transform=(0.633464, 0.0782607, 0.769805, 
+    69.1287, 0.570134, 0.62541, -0.532738, -77.555, -0.523136, 0.776362, 
+    0.351555, 19.8783, 0, 0, 0, 1))
+session.xyPlots['XYPlot-1'].setValues(transform=(0.81769, -0.385355, 0.427649, 
+    84.6749, 0.574462, 0.594101, -0.563061, -74.7696, -0.0370883, 0.706078, 
+    0.707162, -75.7603, 0, 0, 0, 1))
+o3 = session.odbs['E:/00.DTFS/3D_prog/v0.5a - Eg1/debug/abq/job.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=27.7743, 
+    farPlane=45.5122, width=22.5839, height=13.0335, cameraPosition=(-8.59713, 
+    7.44309, 39.8379), cameraUpVector=(-0.0348004, 0.834157, -0.550429), 
+    cameraTarget=(0.20979, -0.419581, 5.20979))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26.9577, 
+    farPlane=46.1523, width=21.9199, height=12.6503, cameraPosition=(-23.0588, 
+    4.96255, 32.9318), cameraUpVector=(0.1298, 0.857692, -0.497509), 
+    cameraTarget=(0.186947, -0.423499, 5.19888))
+odb = session.odbs['E:/00.DTFS/3D_prog/v0.5a - Eg1/debug/abq/job.odb']
+xyList = xyPlot.xyDataListFromField(odb=odb, outputPosition=NODAL, variable=((
+    'NT11', NODAL), ), nodeLabels=(('PART-1-1', ('19', )), ))
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+curveList = session.curveSet(xyData=xyList)
+chart.setValues(curvesToPlot=curveList)
+session.viewports['Viewport: 1'].setValues(displayedObject=xyp)
+o3 = session.odbs['E:/00.DTFS/3D_prog/v0.5a - Eg1/debug/abq/job.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26.4397, 
+    farPlane=46.8992, width=21.4987, height=25.3236, cameraPosition=(-7.96602, 
+    4.99458, 40.447), cameraUpVector=(0.276365, 0.866687, -0.415302), 
+    cameraTarget=(0.174405, -0.423526, 5.19264))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25.0378, 
+    farPlane=48.5078, width=20.3587, height=23.9808, cameraPosition=(22.3757, 
+    7.86868, 33.1048), cameraUpVector=(-0.188541, 0.825412, -0.532116), 
+    cameraTarget=(0.24394, -0.416939, 5.17581))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25.8198, 
+    farPlane=47.7991, width=20.9946, height=24.7298, cameraPosition=(33.3224, 
+    7.03873, 18.9727), cameraUpVector=(-0.440344, 0.850315, -0.288205), 
+    cameraTarget=(0.299714, -0.421168, 5.10381))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.6593, 
+    farPlane=48.3196, width=20.051, height=23.6183, cameraPosition=(18.2878, 
+    29.061, 17.354), cameraUpVector=(-0.968907, 0.224658, -0.103673), 
+    cameraTarget=(0.208217, -0.287145, 5.09396))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26.0614, 
+    farPlane=46.9775, width=21.1911, height=24.9612, cameraPosition=(2.00819, 
+    16.2317, 37.6542), cameraUpVector=(-0.945292, -0.266345, -0.18837), 
+    cameraTarget=(0.251039, -0.253399, 5.04056))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26.3256, 
+    farPlane=47.0793, width=21.4059, height=25.2142, cameraPosition=(5.31568, 
+    -8.72222, 40.2537), cameraUpVector=(-0.943472, -0.205443, -0.260104), 
+    cameraTarget=(0.245061, -0.208297, 5.03586))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25.0643, 
+    farPlane=48.4988, width=20.3803, height=24.0061, cameraPosition=(27.1425, 
+    7.77469, 28.5755), cameraUpVector=(-0.757347, -0.431885, 0.489797), 
+    cameraTarget=(0.314646, -0.155704, 4.99863))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.6771, 
+    farPlane=48.998, width=20.0655, height=23.6353, cameraPosition=(24.1215, 
+    21.4281, -12.7786), cameraUpVector=(0.182174, 0.0333735, 0.9827), 
+    cameraTarget=(0.298537, -0.0829048, 4.77813))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26.1037, 
+    farPlane=47.4389, width=21.2255, height=25.0017, cameraPosition=(26.569, 
+    25.4163, 5.54849), cameraUpVector=(-0.179101, -0.317746, 0.931107), 
+    cameraTarget=(0.315287, -0.0556118, 4.90355))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.3728, 
+    farPlane=49.0542, width=19.8181, height=23.3439, cameraPosition=(20.9022, 
+    18.9504, 28.4933), cameraUpVector=(-0.569575, -0.647703, 0.506029), 
+    cameraTarget=(0.286638, -0.0883005, 5.01955))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.9923, 
+    farPlane=48.5382, width=20.3218, height=23.9372, cameraPosition=(24.8022, 
+    11.6874, 29.4951), cameraUpVector=(-0.723403, -0.505855, 0.469893), 
+    cameraTarget=(0.300248, -0.113646, 5.02305))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25.1441, 
+    farPlane=48.3615, width=20.4452, height=24.0826, cameraPosition=(21.8281, 
+    9.19831, 33.1027), cameraUpVector=(-0.819719, -0.45623, 0.346288), 
+    cameraTarget=(0.285699, -0.125822, 5.0407))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.5464, 
+    farPlane=48.9293, width=19.9592, height=23.5102, cameraPosition=(23.8544, 
+    18.3586, 26.0635), cameraUpVector=(-0.671825, -0.463045, 0.578136), 
+    cameraTarget=(0.294927, -0.0841057, 5.00864))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.8735, 
+    farPlane=48.6478, width=20.2252, height=23.8235, cameraPosition=(27.0669, 
+    20.5321, 19.044), cameraUpVector=(-0.570316, -0.356351, 0.740104), 
+    cameraTarget=(0.30826, -0.075085, 4.97951))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.5873, 
+    farPlane=48.8927, width=19.9925, height=23.5494, cameraPosition=(24.3738, 
+    19.3347, 24.5445), cameraUpVector=(-0.632778, -0.465833, 0.61854), 
+    cameraTarget=(0.29542, -0.0807937, 5.00573))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.634, 
+    farPlane=48.8371, width=20.0304, height=23.5941, cameraPosition=(23.0865, 
+    17.3139, 27.7335), cameraUpVector=(-0.683556, -0.499719, 0.532008), 
+    cameraTarget=(0.290003, -0.0892977, 5.01915))
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    maxAutoCompute=OFF, maxValue=4.2, minAutoCompute=OFF, minValue=0.2)
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    maxValue=4, minValue=0.5)
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    showMinLocation=ON, showMaxLocation=ON)
+session.viewports['Viewport: 1'].odbDisplay.contourOptions.setValues(
+    outsideLimitsAboveColor='#FF0000', outsideLimitsBelowColor='#0000FF')
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26.4937, 
+    farPlane=46.9774, width=21.1623, height=10.6709, viewOffsetX=-0.0890887, 
+    viewOffsetY=1.32418)
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=2 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=3 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=4 )
+session.viewports['Viewport: 1'].odbDisplay.setFrame(step=0, frame=5 )

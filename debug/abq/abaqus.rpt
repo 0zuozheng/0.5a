@@ -1,0 +1,59 @@
+********************************************************************************
+Probe Values Report, written on Sun Sep 14 10:19:27 2014
+
+Source
+-------
+
+   ODB: E:/00.DTFS/3D_prog/v0.5a - Eg2/debug/abq/job.odb
+   Step: Step-2
+   Frame: Increment     10: Step Time =    10.00
+   Variable: HFL, Magnitude (Not averaged)
+
+Loc 1 : Integration point values
+
+Probe values reported at integration points
+
+  Part Instance  Element ID        Type  Attached nodes
+--------------------------------------------------------------------------------
+    PART-1-1           4      DCC3D8          40          41          47          46           4           5          11          10
+
+
+  Part Instance  Element ID        Type   Int. Pt.  HFL, Magnitude
+--------------------------------------------------------------------------------
+    PART-1-1           4      DCC3D8          1       405.
+    PART-1-1           4      DCC3D8          2       399.
+    PART-1-1           4      DCC3D8          3       370.
+    PART-1-1           4      DCC3D8          4       357.
+    PART-1-1           4      DCC3D8          5       398.
+    PART-1-1           4      DCC3D8          6       398.
+    PART-1-1           4      DCC3D8          7       405.
+    PART-1-1           4      DCC3D8          8       399.
+
+
+********************************************************************************
+Probe Values Report, written on Sun Sep 14 11:18:49 2014
+
+Source
+-------
+
+   ODB: E:/00.DTFS/3D_prog/v0.5a - Eg2/debug/abq/job.odb
+   Step: Step-2
+   Frame: Increment      0: Step Time =    0.000
+   Variable: NT11
+
+Probe values reported at nodes
+
+  Part Instance     Node ID            Orig. Coords                     Def. Coords          
+                                 X          Y          Z          X          Y          Z    
+-------------------------------------------------------------------------------------------
+    PART-1-1         224         5.         2.         4.         5.         2.         4.
+
+
+  Part Instance     Node ID  Attached elements       NT11
+----------------------------------------------------------
+    PART-1-1         224        109        10.
+    PART-1-1         224        112        10.
+    PART-1-1         224        118        10.
+    PART-1-1         224        121        10.
+
+

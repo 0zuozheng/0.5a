@@ -1,0 +1,39 @@
+Temperature: loadcase=1,period=1
+   1           15.036
+   2           15.035
+   3           15.035
+   4           15.036
+   5           11.076
+   6           11.076
+   7           11.076
+   8           11.076
+   9             NULL
+  10             NULL
+  11             NULL
+  12             NULL
+Temperature: loadcase=1,period=2
+   1           20.499
+   2           20.499
+   3           20.499
+   4           20.499
+   5            6.969
+   6            6.969
+   7            6.969
+   8            6.969
+   9             NULL
+  10             NULL
+  11             NULL
+  12             NULL
+Temperature: loadcase=1,period=3
+   1           22.712
+   2           22.712
+   3           22.712
+   4           22.712
+   5            7.064
+   6            7.064
+   7            7.064
+   8            7.064
+   9             NULL
+  10             NULL
+  11             NULL
+  12             NULL

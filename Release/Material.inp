@@ -1,0 +1,14 @@
+**Material Num = 1
+*Matrial, name = MAT001
+**Material No.1
+*Conductivity
+52.95,
+*Density
+1000.0,
+*Specific Heat
+0.22421,
+*Heat Generation
+**Theta0 = 12.0
+**m = 0.16
+
+1000.0 0.22421 12.00 0.160 0.0984 0.0984 0.0984 52.95 52.95 52.95
