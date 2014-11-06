@@ -20,8 +20,6 @@ extern int **surf_e;
 //边界条件信息Boundary
 extern int boundarynum_c,*num_b,**list_b,*table_b;
 extern float *fix_b;
-//extern int *node_b;
-//extern float *fix_b;
 
 //工况信息 Loadcase
 extern int incnum_c,inc_l, *deactive_l, maxelement_l;
@@ -49,7 +47,7 @@ extern float **Table_step;
 extern FILE *DEBUG;
 
 //水管信息
-extern int pipenum_c,*pts_p;
+extern int pipenum_c,*pts_p,*pipe_e;
 extern float ***xyz_p;
 
 // iniArray.cpp

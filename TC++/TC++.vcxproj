@@ -84,6 +84,7 @@
     <ClCompile Include="33.Interpolate.cpp" />
     <ClCompile Include="12.Assign.cpp" />
     <ClCompile Include="13.Keyword.cpp" />
+    <ClCompile Include="22.LibraryEnrich.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="30.GeometryAnalysis.cpp" />
     <ClCompile Include="Matrix.cpp" />

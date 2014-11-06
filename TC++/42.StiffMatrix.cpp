@@ -14,7 +14,7 @@ void HPQ_HEX8(int i, int j, int m, float *w, float **det){
 }
 
 void StiffMatrix_HEX8(int i){
-	int m=material_e[i];	// ²ÄÁÏºÅ
+	int m = material_e[i];	// ²ÄÁÏºÅ
 
 	Q0[i] = (float*)calloc(8,sizeof(float));	Alloc2DArray_float(&H[i],8,8);	
 	Q3[i] = (float*)calloc(8,sizeof(float));	Alloc2DArray_float(&P[i],8,8);		//PP[i] = Alloc2DArray_float(8,8);

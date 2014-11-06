@@ -104,7 +104,7 @@ void Assembly(){		// Called By Main.cpp
 	Q0 = (float**)calloc(elementnum_c,sizeof(float*));		H = (float***)calloc(elementnum_c,sizeof(float**));
 	Q3 = (float**)calloc(elementnum_c,sizeof(float*));	
 	calculate_n = (bool*)calloc(nodenum_c,sizeof(bool));	elements_n=(int*)calloc(nodenum_c,sizeof(int));
-	
+
 	NumCols     = (int*)calloc(nodenum_c,sizeof(int));
 	Alloc2DArray_int(&ColId,nodenum_c,conn);
 	Alloc2DArray_float(&ValueRowCol,nodenum_c,conn);
@@ -167,17 +167,16 @@ void PrintElement(int ln,int i){
 void PreTreatment(int ln){ //ln -> loadcase_now
 
 	for(int i=0;i<nodenum_c;i++) { marked[i]=1;  elements_n[i]=0;  calculate_n[i]=false;}  //marked 标记该结点激活
-	for(int i=0;i<elementnum_c;i++){
+	for(int i=0;i<elementnum_c;i++){		
 		if(!deactive_l[i]){	// active -> 单元激活
 			for(int j=0;j<8;j++){
-				elements_n[node_e[i][j]]++;		calculate_n[node_e[i][j]]=true;
+				elements_n[node_e[i][j]]++;	calculate_n[node_e[i][j]]=true;
 			}
-
-			StiffMatrix_HEX8(i);		// 形成单元刚度矩阵
-
 			for(int j=0;j<6;j++){
-				if (surf_e[i][j]>0)	Tface(ln,i,j,surf_e[i][j]);		// 面组装
+				if (surf_e[i][j]>0)	Tface(ln,i,j,surf_e[i][j]);	// 面组装
 			}
+			
+			StiffMatrix_HEX8(i);		// 形成单元刚度矩阵
 
 			PrintElement(ln,i);
 		}
@@ -188,4 +187,3 @@ void PreTreatment(int ln){ //ln -> loadcase_now
 		order[i]=l;
 	}
 }
-

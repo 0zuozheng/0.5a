@@ -92,6 +92,9 @@
     <ClCompile Include="61.Write.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="22.LibraryEnrich.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Construct.h">

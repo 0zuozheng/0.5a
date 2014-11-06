@@ -5,312 +5,3609 @@ VARIABLES = "X","Y","Z",
 ZONE
 DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=1"
 STRANDID = 1,SOLUTIONTIME = 1
-NODES= 275
-ELEMENTS= 160
+NODES= 10
+ELEMENTS= 1
 #### Increment:1
 #### X
                0               1               1               0               0               1               1               0
-               2               3               4               5               6               7               8               9
-              10               2               3               4               5               6               7               8
-               9              10               2               3               4               5               6               7
-               8               9              10               2               3               4               5               6
-               7               8               9              10               0               0               0               1
-               1               1               1               1               1               0               0               0
-               2               2               2               3               3               3               4               4
-               4               5               5               5               6               6               6               7
-               7               7               8               8               8               9               9               9
-              10              10              10               2               2               2               3               3
-               3               4               4               4               5               5               5               6
-               6               6               7               7               7               8               8               8
-               9               9               9              10              10              10               0               0
-               0               1               1               1               0               0               0               1
-               1               1               2               2               2               3               3               3
-               4               4               4               5               5               5               6               6
-               6               7               7               7               8               8               8               9
-               9               9              10              10              10               2               2               2
-               3               3               3               4               4               4               5               5
-               5               6               6               6               7               7               7               8
-               8               8               9               9               9              10              10              10
-               0               0               0               0               0               0               0               0
-               0               1               1               1               1               1               1               1
-               1               1               2               2               2               2               2               2
-               2               2               2               3               3               3               3               3
-               3               3               3               3               4               4               4               4
-               4               4               4               4               4               5               5               5
-               5               5               5               5               5               5               6               6
-               6               6               6               6               6               6               6               7
-               7               7               7               7               7               7               7               7
-               8               8               8               8               8               8               8               8
-               8               9               9               9               9               9               9               9
-               9               9              10              10              10              10              10              10
-              10              10              10
+             0.5             0.5
 #### Y
                0               0               0               0               1               1               1               1
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               1               1               1               1               1               1
-               1               1               1               1               1               1               1               1
-               1               1               1               1               2               3               4               2
-               3               4               2               3               4               2               3               4
-               2               3               4               2               3               4               2               3
-               4               2               3               4               2               3               4               2
-               3               4               2               3               4               2               3               4
-               2               3               4               2               3               4               2               3
-               4               2               3               4               2               3               4               2
-               3               4               2               3               4               2               3               4
-               2               3               4               2               3               4               0               0
-               0               0               0               0               1               1               1               1
-               1               1               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               1               1               1
-               1               1               1               1               1               1               1               1
-               1               1               1               1               1               1               1               1
-               1               1               1               1               1               1               1               1
-               2               2               2               3               3               3               4               4
-               4               2               2               2               3               3               3               4
-               4               4               2               2               2               3               3               3
-               4               4               4               2               2               2               3               3
-               3               4               4               4               2               2               2               3
-               3               3               4               4               4               2               2               2
-               3               3               3               4               4               4               2               2
-               2               3               3               3               4               4               4               2
-               2               2               3               3               3               4               4               4
-               2               2               2               3               3               3               4               4
-               4               2               2               2               3               3               3               4
-               4               4               2               2               2               3               3               3
-               4               4               4
+               1               0
 #### Z
                0               0               1               1               0               0               1               1
-               0               0               0               0               0               0               0               0
-               0               1               1               1               1               1               1               1
-               1               1               0               0               0               0               0               0
-               0               0               0               1               1               1               1               1
-               1               1               1               1               0               0               0               0
-               0               0               1               1               1               1               1               1
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               1               1               1               1               1
-               1               1               1               1               1               1               1               1
-               1               1               1               1               1               1               1               1
-               1               1               1               1               1               1               2               3
-               4               2               3               4               2               3               4               2
-               3               4               2               3               4               2               3               4
-               2               3               4               2               3               4               2               3
-               4               2               3               4               2               3               4               2
-               3               4               2               3               4               2               3               4
-               2               3               4               2               3               4               2               3
-               4               2               3               4               2               3               4               2
-               3               4               2               3               4               2               3               4
-               2               3               4               2               3               4               2               3
-               4               2               3               4               2               3               4               2
-               3               4               2               3               4               2               3               4
-               2               3               4               2               3               4               2               3
-               4               2               3               4               2               3               4               2
-               3               4               2               3               4               2               3               4
-               2               3               4               2               3               4               2               3
-               4               2               3               4               2               3               4               2
-               3               4               2               3               4               2               3               4
-               2               3               4               2               3               4               2               3
-               4               2               3               4               2               3               4               2
-               3               4               2               3               4               2               3               4
-               2               3               4
+             0.5             0.5
 #### Temperature
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0               0               0               0               0               0
-               0               0               0
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
 #### Connectivity
        5       6       7       8       1       2       3       4
-       6      27      36       7       2       9      18       3
-      27      28      37      36       9      10      19      18
-      28      29      38      37      10      11      20      19
-      29      30      39      38      11      12      21      20
-      30      31      40      39      12      13      22      21
-      31      32      41      40      13      14      23      22
-      32      33      42      41      14      15      24      23
-      33      34      43      42      15      16      25      24
-      34      35      44      43      16      17      26      25
-      45      48      51      54       5       6       7       8
-      46      49      52      55      45      48      51      54
-      47      50      53      56      46      49      52      55
-      48      57      84      51       6      27      36       7
-      49      58      85      52      48      57      84      51
-      50      59      86      53      49      58      85      52
-      57      60      87      84      27      28      37      36
-      58      61      88      85      57      60      87      84
-      59      62      89      86      58      61      88      85
-      60      63      90      87      28      29      38      37
-      61      64      91      88      60      63      90      87
-      62      65      92      89      61      64      91      88
-      63      66      93      90      29      30      39      38
-      64      67      94      91      63      66      93      90
-      65      68      95      92      64      67      94      91
-      66      69      96      93      30      31      40      39
-      67      70      97      94      66      69      96      93
-      68      71      98      95      67      70      97      94
-      69      72      99      96      31      32      41      40
-      70      73     100      97      69      72      99      96
-      71      74     101      98      70      73     100      97
-      72      75     102      99      32      33      42      41
-      73      76     103     100      72      75     102      99
-      74      77     104     101      73      76     103     100
-      75      78     105     102      33      34      43      42
-      76      79     106     103      75      78     105     102
-      77      80     107     104      76      79     106     103
-      78      81     108     105      34      35      44      43
-      79      82     109     106      78      81     108     105
-      80      83     110     107      79      82     109     106
-       8       7     120     117       4       3     114     111
-     117     120     121     118     111     114     115     112
-     118     121     122     119     112     115     116     113
-       7      36     150     120       3      18     123     114
-     120     150     151     121     114     123     124     115
-     121     151     152     122     115     124     125     116
-      36      37     153     150      18      19     126     123
-     150     153     154     151     123     126     127     124
-     151     154     155     152     124     127     128     125
-      37      38     156     153      19      20     129     126
-     153     156     157     154     126     129     130     127
-     154     157     158     155     127     130     131     128
-      38      39     159     156      20      21     132     129
-     156     159     160     157     129     132     133     130
-     157     160     161     158     130     133     134     131
-      39      40     162     159      21      22     135     132
-     159     162     163     160     132     135     136     133
-     160     163     164     161     133     136     137     134
-      40      41     165     162      22      23     138     135
-     162     165     166     163     135     138     139     136
-     163     166     167     164     136     139     140     137
-      41      42     168     165      23      24     141     138
-     165     168     169     166     138     141     142     139
-     166     169     170     167     139     142     143     140
-      42      43     171     168      24      25     144     141
-     168     171     172     169     141     144     145     142
-     169     172     173     170     142     145     146     143
-      43      44     174     171      25      26     147     144
-     171     174     175     172     144     147     148     145
-     172     175     176     173     145     148     149     146
-      54      51     186     177       8       7     120     117
-     177     186     187     178     117     120     121     118
-     178     187     188     179     118     121     122     119
-      55      52     189     180      54      51     186     177
-     180     189     190     181     177     186     187     178
-     181     190     191     182     178     187     188     179
-      56      53     192     183      55      52     189     180
-     183     192     193     184     180     189     190     181
-     184     193     194     185     181     190     191     182
-      51      84     195     186       7      36     150     120
-     186     195     196     187     120     150     151     121
-     187     196     197     188     121     151     152     122
-      52      85     198     189      51      84     195     186
-     189     198     199     190     186     195     196     187
-     190     199     200     191     187     196     197     188
-      53      86     201     192      52      85     198     189
-     192     201     202     193     189     198     199     190
-     193     202     203     194     190     199     200     191
-      84      87     204     195      36      37     153     150
-     195     204     205     196     150     153     154     151
-     196     205     206     197     151     154     155     152
-      85      88     207     198      84      87     204     195
-     198     207     208     199     195     204     205     196
-     199     208     209     200     196     205     206     197
-      86      89     210     201      85      88     207     198
-     201     210     211     202     198     207     208     199
-     202     211     212     203     199     208     209     200
-      87      90     213     204      37      38     156     153
-     204     213     214     205     153     156     157     154
-     205     214     215     206     154     157     158     155
-      88      91     216     207      87      90     213     204
-     207     216     217     208     204     213     214     205
-     208     217     218     209     205     214     215     206
-      89      92     219     210      88      91     216     207
-     210     219     220     211     207     216     217     208
-     211     220     221     212     208     217     218     209
-      90      93     222     213      38      39     159     156
-     213     222     223     214     156     159     160     157
-     214     223     224     215     157     160     161     158
-      91      94     225     216      90      93     222     213
-     216     225     226     217     213     222     223     214
-     217     226     227     218     214     223     224     215
-      92      95     228     219      91      94     225     216
-     219     228     229     220     216     225     226     217
-     220     229     230     221     217     226     227     218
-      93      96     231     222      39      40     162     159
-     222     231     232     223     159     162     163     160
-     223     232     233     224     160     163     164     161
-      94      97     234     225      93      96     231     222
-     225     234     235     226     222     231     232     223
-     226     235     236     227     223     232     233     224
-      95      98     237     228      94      97     234     225
-     228     237     238     229     225     234     235     226
-     229     238     239     230     226     235     236     227
-      96      99     240     231      40      41     165     162
-     231     240     241     232     162     165     166     163
-     232     241     242     233     163     166     167     164
-      97     100     243     234      96      99     240     231
-     234     243     244     235     231     240     241     232
-     235     244     245     236     232     241     242     233
-      98     101     246     237      97     100     243     234
-     237     246     247     238     234     243     244     235
-     238     247     248     239     235     244     245     236
-      99     102     249     240      41      42     168     165
-     240     249     250     241     165     168     169     166
-     241     250     251     242     166     169     170     167
-     100     103     252     243      99     102     249     240
-     243     252     253     244     240     249     250     241
-     244     253     254     245     241     250     251     242
-     101     104     255     246     100     103     252     243
-     246     255     256     247     243     252     253     244
-     247     256     257     248     244     253     254     245
-     102     105     258     249      42      43     171     168
-     249     258     259     250     168     171     172     169
-     250     259     260     251     169     172     173     170
-     103     106     261     252     102     105     258     249
-     252     261     262     253     249     258     259     250
-     253     262     263     254     250     259     260     251
-     104     107     264     255     103     106     261     252
-     255     264     265     256     252     261     262     253
-     256     265     266     257     253     262     263     254
-     105     108     267     258      43      44     174     171
-     258     267     268     259     171     174     175     172
-     259     268     269     260     172     175     176     173
-     106     109     270     261     105     108     267     258
-     261     270     271     262     258     267     268     259
-     262     271     272     263     259     268     269     260
-     107     110     273     264     106     109     270     261
-     264     273     274     265     261     270     271     262
-     265     274     275     266     262     271     272     263
 
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=2"
+STRANDID = 1,SOLUTIONTIME = 2
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 1
+#### Increment:2
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=3"
+STRANDID = 1,SOLUTIONTIME = 3
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 2
+#### Increment:3
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=4"
+STRANDID = 1,SOLUTIONTIME = 4
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 3
+#### Increment:4
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=5"
+STRANDID = 1,SOLUTIONTIME = 5
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 4
+#### Increment:5
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=6"
+STRANDID = 1,SOLUTIONTIME = 6
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 5
+#### Increment:6
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=7"
+STRANDID = 1,SOLUTIONTIME = 7
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 6
+#### Increment:7
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=8"
+STRANDID = 1,SOLUTIONTIME = 8
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 7
+#### Increment:8
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=9"
+STRANDID = 1,SOLUTIONTIME = 9
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 8
+#### Increment:9
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=10"
+STRANDID = 1,SOLUTIONTIME = 10
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 9
+#### Increment:10
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=11"
+STRANDID = 1,SOLUTIONTIME = 11
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 10
+#### Increment:11
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=12"
+STRANDID = 1,SOLUTIONTIME = 12
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 11
+#### Increment:12
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=13"
+STRANDID = 1,SOLUTIONTIME = 13
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 12
+#### Increment:13
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=14"
+STRANDID = 1,SOLUTIONTIME = 14
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 13
+#### Increment:14
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=15"
+STRANDID = 1,SOLUTIONTIME = 15
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 14
+#### Increment:15
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=16"
+STRANDID = 1,SOLUTIONTIME = 16
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 15
+#### Increment:16
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=17"
+STRANDID = 1,SOLUTIONTIME = 17
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 16
+#### Increment:17
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=18"
+STRANDID = 1,SOLUTIONTIME = 18
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 17
+#### Increment:18
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=19"
+STRANDID = 1,SOLUTIONTIME = 19
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 18
+#### Increment:19
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=20"
+STRANDID = 1,SOLUTIONTIME = 20
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 19
+#### Increment:20
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=21"
+STRANDID = 1,SOLUTIONTIME = 21
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 20
+#### Increment:21
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=22"
+STRANDID = 1,SOLUTIONTIME = 22
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 21
+#### Increment:22
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=23"
+STRANDID = 1,SOLUTIONTIME = 23
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 22
+#### Increment:23
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=24"
+STRANDID = 1,SOLUTIONTIME = 24
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 23
+#### Increment:24
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=25"
+STRANDID = 1,SOLUTIONTIME = 25
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 24
+#### Increment:25
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=26"
+STRANDID = 1,SOLUTIONTIME = 26
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 25
+#### Increment:26
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=27"
+STRANDID = 1,SOLUTIONTIME = 27
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 26
+#### Increment:27
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=28"
+STRANDID = 1,SOLUTIONTIME = 28
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 27
+#### Increment:28
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=29"
+STRANDID = 1,SOLUTIONTIME = 29
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 28
+#### Increment:29
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=30"
+STRANDID = 1,SOLUTIONTIME = 30
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 29
+#### Increment:30
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=31"
+STRANDID = 1,SOLUTIONTIME = 31
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 30
+#### Increment:31
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=32"
+STRANDID = 1,SOLUTIONTIME = 32
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 31
+#### Increment:32
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=33"
+STRANDID = 1,SOLUTIONTIME = 33
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 32
+#### Increment:33
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=34"
+STRANDID = 1,SOLUTIONTIME = 34
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 33
+#### Increment:34
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=35"
+STRANDID = 1,SOLUTIONTIME = 35
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 34
+#### Increment:35
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=36"
+STRANDID = 1,SOLUTIONTIME = 36
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 35
+#### Increment:36
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=37"
+STRANDID = 1,SOLUTIONTIME = 37
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 36
+#### Increment:37
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=38"
+STRANDID = 1,SOLUTIONTIME = 38
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 37
+#### Increment:38
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=39"
+STRANDID = 1,SOLUTIONTIME = 39
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 38
+#### Increment:39
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=40"
+STRANDID = 1,SOLUTIONTIME = 40
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 39
+#### Increment:40
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=41"
+STRANDID = 1,SOLUTIONTIME = 41
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 40
+#### Increment:41
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=42"
+STRANDID = 1,SOLUTIONTIME = 42
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 41
+#### Increment:42
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=43"
+STRANDID = 1,SOLUTIONTIME = 43
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 42
+#### Increment:43
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=44"
+STRANDID = 1,SOLUTIONTIME = 44
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 43
+#### Increment:44
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=45"
+STRANDID = 1,SOLUTIONTIME = 45
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 44
+#### Increment:45
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=46"
+STRANDID = 1,SOLUTIONTIME = 46
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 45
+#### Increment:46
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=47"
+STRANDID = 1,SOLUTIONTIME = 47
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 46
+#### Increment:47
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=48"
+STRANDID = 1,SOLUTIONTIME = 48
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 47
+#### Increment:48
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=49"
+STRANDID = 1,SOLUTIONTIME = 49
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 48
+#### Increment:49
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=50"
+STRANDID = 1,SOLUTIONTIME = 50
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 49
+#### Increment:50
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=51"
+STRANDID = 1,SOLUTIONTIME = 51
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 50
+#### Increment:51
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=52"
+STRANDID = 1,SOLUTIONTIME = 52
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 51
+#### Increment:52
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=53"
+STRANDID = 1,SOLUTIONTIME = 53
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 52
+#### Increment:53
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=54"
+STRANDID = 1,SOLUTIONTIME = 54
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 53
+#### Increment:54
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=55"
+STRANDID = 1,SOLUTIONTIME = 55
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 54
+#### Increment:55
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=56"
+STRANDID = 1,SOLUTIONTIME = 56
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 55
+#### Increment:56
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=57"
+STRANDID = 1,SOLUTIONTIME = 57
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 56
+#### Increment:57
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=58"
+STRANDID = 1,SOLUTIONTIME = 58
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 57
+#### Increment:58
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=59"
+STRANDID = 1,SOLUTIONTIME = 59
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 58
+#### Increment:59
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=60"
+STRANDID = 1,SOLUTIONTIME = 60
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 59
+#### Increment:60
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=61"
+STRANDID = 1,SOLUTIONTIME = 61
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 60
+#### Increment:61
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=62"
+STRANDID = 1,SOLUTIONTIME = 62
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 61
+#### Increment:62
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=63"
+STRANDID = 1,SOLUTIONTIME = 63
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 62
+#### Increment:63
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=64"
+STRANDID = 1,SOLUTIONTIME = 64
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 63
+#### Increment:64
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=65"
+STRANDID = 1,SOLUTIONTIME = 65
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 64
+#### Increment:65
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=66"
+STRANDID = 1,SOLUTIONTIME = 66
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 65
+#### Increment:66
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=67"
+STRANDID = 1,SOLUTIONTIME = 67
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 66
+#### Increment:67
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=68"
+STRANDID = 1,SOLUTIONTIME = 68
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 67
+#### Increment:68
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=69"
+STRANDID = 1,SOLUTIONTIME = 69
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 68
+#### Increment:69
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=70"
+STRANDID = 1,SOLUTIONTIME = 70
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 69
+#### Increment:70
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=71"
+STRANDID = 1,SOLUTIONTIME = 71
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 70
+#### Increment:71
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=72"
+STRANDID = 1,SOLUTIONTIME = 72
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 71
+#### Increment:72
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=73"
+STRANDID = 1,SOLUTIONTIME = 73
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 72
+#### Increment:73
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=74"
+STRANDID = 1,SOLUTIONTIME = 74
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 73
+#### Increment:74
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=75"
+STRANDID = 1,SOLUTIONTIME = 75
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 74
+#### Increment:75
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=76"
+STRANDID = 1,SOLUTIONTIME = 76
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 75
+#### Increment:76
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=77"
+STRANDID = 1,SOLUTIONTIME = 77
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 76
+#### Increment:77
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=78"
+STRANDID = 1,SOLUTIONTIME = 78
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 77
+#### Increment:78
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=79"
+STRANDID = 1,SOLUTIONTIME = 79
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 78
+#### Increment:79
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=80"
+STRANDID = 1,SOLUTIONTIME = 80
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 79
+#### Increment:80
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=81"
+STRANDID = 1,SOLUTIONTIME = 81
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 80
+#### Increment:81
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=82"
+STRANDID = 1,SOLUTIONTIME = 82
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 81
+#### Increment:82
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=83"
+STRANDID = 1,SOLUTIONTIME = 83
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 82
+#### Increment:83
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=84"
+STRANDID = 1,SOLUTIONTIME = 84
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 83
+#### Increment:84
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=85"
+STRANDID = 1,SOLUTIONTIME = 85
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 84
+#### Increment:85
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=86"
+STRANDID = 1,SOLUTIONTIME = 86
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 85
+#### Increment:86
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=87"
+STRANDID = 1,SOLUTIONTIME = 87
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 86
+#### Increment:87
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=88"
+STRANDID = 1,SOLUTIONTIME = 88
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 87
+#### Increment:88
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=89"
+STRANDID = 1,SOLUTIONTIME = 89
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 88
+#### Increment:89
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=90"
+STRANDID = 1,SOLUTIONTIME = 90
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 89
+#### Increment:90
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=91"
+STRANDID = 1,SOLUTIONTIME = 91
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 90
+#### Increment:91
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=92"
+STRANDID = 1,SOLUTIONTIME = 92
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 91
+#### Increment:92
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=93"
+STRANDID = 1,SOLUTIONTIME = 93
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 92
+#### Increment:93
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=94"
+STRANDID = 1,SOLUTIONTIME = 94
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 93
+#### Increment:94
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=95"
+STRANDID = 1,SOLUTIONTIME = 95
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 94
+#### Increment:95
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=96"
+STRANDID = 1,SOLUTIONTIME = 96
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 95
+#### Increment:96
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=97"
+STRANDID = 1,SOLUTIONTIME = 97
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 96
+#### Increment:97
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=98"
+STRANDID = 1,SOLUTIONTIME = 98
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 97
+#### Increment:98
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=99"
+STRANDID = 1,SOLUTIONTIME = 99
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 98
+#### Increment:99
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=100"
+STRANDID = 1,SOLUTIONTIME = 100
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 99
+#### Increment:100
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=101"
+STRANDID = 1,SOLUTIONTIME = 101
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 100
+#### Increment:101
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=102"
+STRANDID = 1,SOLUTIONTIME = 102
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 101
+#### Increment:102
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=103"
+STRANDID = 1,SOLUTIONTIME = 103
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 102
+#### Increment:103
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=104"
+STRANDID = 1,SOLUTIONTIME = 104
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 103
+#### Increment:104
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=105"
+STRANDID = 1,SOLUTIONTIME = 105
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 104
+#### Increment:105
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=106"
+STRANDID = 1,SOLUTIONTIME = 106
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 105
+#### Increment:106
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=107"
+STRANDID = 1,SOLUTIONTIME = 107
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 106
+#### Increment:107
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=108"
+STRANDID = 1,SOLUTIONTIME = 108
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 107
+#### Increment:108
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=109"
+STRANDID = 1,SOLUTIONTIME = 109
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 108
+#### Increment:109
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=110"
+STRANDID = 1,SOLUTIONTIME = 110
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 109
+#### Increment:110
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=111"
+STRANDID = 1,SOLUTIONTIME = 111
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 110
+#### Increment:111
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=112"
+STRANDID = 1,SOLUTIONTIME = 112
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 111
+#### Increment:112
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=113"
+STRANDID = 1,SOLUTIONTIME = 113
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 112
+#### Increment:113
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=114"
+STRANDID = 1,SOLUTIONTIME = 114
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 113
+#### Increment:114
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=115"
+STRANDID = 1,SOLUTIONTIME = 115
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 114
+#### Increment:115
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=116"
+STRANDID = 1,SOLUTIONTIME = 116
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 115
+#### Increment:116
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=117"
+STRANDID = 1,SOLUTIONTIME = 117
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 116
+#### Increment:117
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=118"
+STRANDID = 1,SOLUTIONTIME = 118
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 117
+#### Increment:118
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=119"
+STRANDID = 1,SOLUTIONTIME = 119
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 118
+#### Increment:119
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=120"
+STRANDID = 1,SOLUTIONTIME = 120
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 119
+#### Increment:120
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=121"
+STRANDID = 1,SOLUTIONTIME = 121
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 120
+#### Increment:121
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=122"
+STRANDID = 1,SOLUTIONTIME = 122
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 121
+#### Increment:122
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=123"
+STRANDID = 1,SOLUTIONTIME = 123
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 122
+#### Increment:123
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=124"
+STRANDID = 1,SOLUTIONTIME = 124
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 123
+#### Increment:124
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=125"
+STRANDID = 1,SOLUTIONTIME = 125
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 124
+#### Increment:125
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=126"
+STRANDID = 1,SOLUTIONTIME = 126
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 125
+#### Increment:126
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=127"
+STRANDID = 1,SOLUTIONTIME = 127
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 126
+#### Increment:127
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=128"
+STRANDID = 1,SOLUTIONTIME = 128
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 127
+#### Increment:128
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=129"
+STRANDID = 1,SOLUTIONTIME = 129
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 128
+#### Increment:129
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=130"
+STRANDID = 1,SOLUTIONTIME = 130
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 129
+#### Increment:130
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=131"
+STRANDID = 1,SOLUTIONTIME = 131
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 130
+#### Increment:131
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=132"
+STRANDID = 1,SOLUTIONTIME = 132
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 131
+#### Increment:132
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=133"
+STRANDID = 1,SOLUTIONTIME = 133
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 132
+#### Increment:133
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=134"
+STRANDID = 1,SOLUTIONTIME = 134
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 133
+#### Increment:134
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=135"
+STRANDID = 1,SOLUTIONTIME = 135
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 134
+#### Increment:135
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=136"
+STRANDID = 1,SOLUTIONTIME = 136
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 135
+#### Increment:136
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=137"
+STRANDID = 1,SOLUTIONTIME = 137
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 136
+#### Increment:137
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=138"
+STRANDID = 1,SOLUTIONTIME = 138
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 137
+#### Increment:138
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=139"
+STRANDID = 1,SOLUTIONTIME = 139
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 138
+#### Increment:139
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=140"
+STRANDID = 1,SOLUTIONTIME = 140
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 139
+#### Increment:140
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=141"
+STRANDID = 1,SOLUTIONTIME = 141
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 140
+#### Increment:141
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=142"
+STRANDID = 1,SOLUTIONTIME = 142
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 141
+#### Increment:142
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=143"
+STRANDID = 1,SOLUTIONTIME = 143
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 142
+#### Increment:143
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=144"
+STRANDID = 1,SOLUTIONTIME = 144
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 143
+#### Increment:144
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=145"
+STRANDID = 1,SOLUTIONTIME = 145
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 144
+#### Increment:145
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=146"
+STRANDID = 1,SOLUTIONTIME = 146
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 145
+#### Increment:146
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=147"
+STRANDID = 1,SOLUTIONTIME = 147
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 146
+#### Increment:147
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=148"
+STRANDID = 1,SOLUTIONTIME = 148
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 147
+#### Increment:148
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=149"
+STRANDID = 1,SOLUTIONTIME = 149
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 148
+#### Increment:149
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=150"
+STRANDID = 1,SOLUTIONTIME = 150
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 149
+#### Increment:150
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=151"
+STRANDID = 1,SOLUTIONTIME = 151
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 150
+#### Increment:151
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=152"
+STRANDID = 1,SOLUTIONTIME = 152
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 151
+#### Increment:152
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=153"
+STRANDID = 1,SOLUTIONTIME = 153
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 152
+#### Increment:153
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=154"
+STRANDID = 1,SOLUTIONTIME = 154
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 153
+#### Increment:154
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=155"
+STRANDID = 1,SOLUTIONTIME = 155
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 154
+#### Increment:155
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=156"
+STRANDID = 1,SOLUTIONTIME = 156
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 155
+#### Increment:156
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=157"
+STRANDID = 1,SOLUTIONTIME = 157
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 156
+#### Increment:157
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=158"
+STRANDID = 1,SOLUTIONTIME = 158
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 157
+#### Increment:158
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=159"
+STRANDID = 1,SOLUTIONTIME = 159
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 158
+#### Increment:159
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=160"
+STRANDID = 1,SOLUTIONTIME = 160
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 159
+#### Increment:160
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=161"
+STRANDID = 1,SOLUTIONTIME = 161
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 160
+#### Increment:161
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=162"
+STRANDID = 1,SOLUTIONTIME = 162
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 161
+#### Increment:162
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=163"
+STRANDID = 1,SOLUTIONTIME = 163
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 162
+#### Increment:163
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=164"
+STRANDID = 1,SOLUTIONTIME = 164
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 163
+#### Increment:164
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=165"
+STRANDID = 1,SOLUTIONTIME = 165
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 164
+#### Increment:165
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=166"
+STRANDID = 1,SOLUTIONTIME = 166
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 165
+#### Increment:166
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=167"
+STRANDID = 1,SOLUTIONTIME = 167
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 166
+#### Increment:167
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=168"
+STRANDID = 1,SOLUTIONTIME = 168
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 167
+#### Increment:168
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=169"
+STRANDID = 1,SOLUTIONTIME = 169
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 168
+#### Increment:169
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=170"
+STRANDID = 1,SOLUTIONTIME = 170
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 169
+#### Increment:170
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=171"
+STRANDID = 1,SOLUTIONTIME = 171
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 170
+#### Increment:171
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=172"
+STRANDID = 1,SOLUTIONTIME = 172
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 171
+#### Increment:172
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=173"
+STRANDID = 1,SOLUTIONTIME = 173
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 172
+#### Increment:173
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=174"
+STRANDID = 1,SOLUTIONTIME = 174
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 173
+#### Increment:174
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=175"
+STRANDID = 1,SOLUTIONTIME = 175
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 174
+#### Increment:175
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=176"
+STRANDID = 1,SOLUTIONTIME = 176
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 175
+#### Increment:176
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=177"
+STRANDID = 1,SOLUTIONTIME = 177
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 176
+#### Increment:177
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=178"
+STRANDID = 1,SOLUTIONTIME = 178
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 177
+#### Increment:178
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=179"
+STRANDID = 1,SOLUTIONTIME = 179
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 178
+#### Increment:179
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=180"
+STRANDID = 1,SOLUTIONTIME = 180
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 179
+#### Increment:180
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=181"
+STRANDID = 1,SOLUTIONTIME = 181
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 180
+#### Increment:181
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=182"
+STRANDID = 1,SOLUTIONTIME = 182
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 181
+#### Increment:182
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=183"
+STRANDID = 1,SOLUTIONTIME = 183
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 182
+#### Increment:183
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=184"
+STRANDID = 1,SOLUTIONTIME = 184
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 183
+#### Increment:184
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=185"
+STRANDID = 1,SOLUTIONTIME = 185
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 184
+#### Increment:185
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=186"
+STRANDID = 1,SOLUTIONTIME = 186
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 185
+#### Increment:186
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=187"
+STRANDID = 1,SOLUTIONTIME = 187
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 186
+#### Increment:187
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=188"
+STRANDID = 1,SOLUTIONTIME = 188
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 187
+#### Increment:188
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=189"
+STRANDID = 1,SOLUTIONTIME = 189
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 188
+#### Increment:189
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=190"
+STRANDID = 1,SOLUTIONTIME = 190
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 189
+#### Increment:190
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=191"
+STRANDID = 1,SOLUTIONTIME = 191
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 190
+#### Increment:191
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=192"
+STRANDID = 1,SOLUTIONTIME = 192
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 191
+#### Increment:192
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=193"
+STRANDID = 1,SOLUTIONTIME = 193
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 192
+#### Increment:193
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=194"
+STRANDID = 1,SOLUTIONTIME = 194
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 193
+#### Increment:194
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=195"
+STRANDID = 1,SOLUTIONTIME = 195
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 194
+#### Increment:195
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=196"
+STRANDID = 1,SOLUTIONTIME = 196
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 195
+#### Increment:196
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=197"
+STRANDID = 1,SOLUTIONTIME = 197
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 196
+#### Increment:197
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=198"
+STRANDID = 1,SOLUTIONTIME = 198
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 197
+#### Increment:198
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=199"
+STRANDID = 1,SOLUTIONTIME = 199
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 198
+#### Increment:199
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=200"
+STRANDID = 1,SOLUTIONTIME = 200
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 199
+#### Increment:200
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=201"
+STRANDID = 1,SOLUTIONTIME = 201
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 200
+#### Increment:201
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=202"
+STRANDID = 1,SOLUTIONTIME = 202
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 201
+#### Increment:202
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=203"
+STRANDID = 1,SOLUTIONTIME = 203
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 202
+#### Increment:203
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=204"
+STRANDID = 1,SOLUTIONTIME = 204
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 203
+#### Increment:204
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=205"
+STRANDID = 1,SOLUTIONTIME = 205
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 204
+#### Increment:205
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=206"
+STRANDID = 1,SOLUTIONTIME = 206
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 205
+#### Increment:206
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=207"
+STRANDID = 1,SOLUTIONTIME = 207
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 206
+#### Increment:207
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=208"
+STRANDID = 1,SOLUTIONTIME = 208
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 207
+#### Increment:208
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=209"
+STRANDID = 1,SOLUTIONTIME = 209
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 208
+#### Increment:209
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=210"
+STRANDID = 1,SOLUTIONTIME = 210
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 209
+#### Increment:210
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=211"
+STRANDID = 1,SOLUTIONTIME = 211
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 210
+#### Increment:211
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=212"
+STRANDID = 1,SOLUTIONTIME = 212
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 211
+#### Increment:212
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=213"
+STRANDID = 1,SOLUTIONTIME = 213
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 212
+#### Increment:213
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=214"
+STRANDID = 1,SOLUTIONTIME = 214
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 213
+#### Increment:214
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=215"
+STRANDID = 1,SOLUTIONTIME = 215
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 214
+#### Increment:215
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=216"
+STRANDID = 1,SOLUTIONTIME = 216
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 215
+#### Increment:216
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=217"
+STRANDID = 1,SOLUTIONTIME = 217
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 216
+#### Increment:217
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=218"
+STRANDID = 1,SOLUTIONTIME = 218
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 217
+#### Increment:218
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=219"
+STRANDID = 1,SOLUTIONTIME = 219
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 218
+#### Increment:219
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=220"
+STRANDID = 1,SOLUTIONTIME = 220
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 219
+#### Increment:220
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=221"
+STRANDID = 1,SOLUTIONTIME = 221
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 220
+#### Increment:221
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=222"
+STRANDID = 1,SOLUTIONTIME = 222
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 221
+#### Increment:222
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=223"
+STRANDID = 1,SOLUTIONTIME = 223
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 222
+#### Increment:223
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=224"
+STRANDID = 1,SOLUTIONTIME = 224
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 223
+#### Increment:224
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=225"
+STRANDID = 1,SOLUTIONTIME = 225
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 224
+#### Increment:225
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=226"
+STRANDID = 1,SOLUTIONTIME = 226
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 225
+#### Increment:226
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=227"
+STRANDID = 1,SOLUTIONTIME = 227
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 226
+#### Increment:227
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=228"
+STRANDID = 1,SOLUTIONTIME = 228
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 227
+#### Increment:228
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=229"
+STRANDID = 1,SOLUTIONTIME = 229
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 228
+#### Increment:229
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=230"
+STRANDID = 1,SOLUTIONTIME = 230
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 229
+#### Increment:230
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=231"
+STRANDID = 1,SOLUTIONTIME = 231
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 230
+#### Increment:231
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=232"
+STRANDID = 1,SOLUTIONTIME = 232
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 231
+#### Increment:232
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=233"
+STRANDID = 1,SOLUTIONTIME = 233
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 232
+#### Increment:233
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=234"
+STRANDID = 1,SOLUTIONTIME = 234
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 233
+#### Increment:234
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=235"
+STRANDID = 1,SOLUTIONTIME = 235
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 234
+#### Increment:235
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=236"
+STRANDID = 1,SOLUTIONTIME = 236
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 235
+#### Increment:236
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=237"
+STRANDID = 1,SOLUTIONTIME = 237
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 236
+#### Increment:237
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=238"
+STRANDID = 1,SOLUTIONTIME = 238
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 237
+#### Increment:238
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=239"
+STRANDID = 1,SOLUTIONTIME = 239
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 238
+#### Increment:239
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=240"
+STRANDID = 1,SOLUTIONTIME = 240
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 239
+#### Increment:240
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=241"
+STRANDID = 1,SOLUTIONTIME = 241
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 240
+#### Increment:241
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=242"
+STRANDID = 1,SOLUTIONTIME = 242
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 241
+#### Increment:242
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=243"
+STRANDID = 1,SOLUTIONTIME = 243
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 242
+#### Increment:243
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=244"
+STRANDID = 1,SOLUTIONTIME = 244
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 243
+#### Increment:244
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=245"
+STRANDID = 1,SOLUTIONTIME = 245
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 244
+#### Increment:245
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=246"
+STRANDID = 1,SOLUTIONTIME = 246
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 245
+#### Increment:246
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=247"
+STRANDID = 1,SOLUTIONTIME = 247
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 246
+#### Increment:247
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=248"
+STRANDID = 1,SOLUTIONTIME = 248
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 247
+#### Increment:248
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=249"
+STRANDID = 1,SOLUTIONTIME = 249
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 248
+#### Increment:249
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=250"
+STRANDID = 1,SOLUTIONTIME = 250
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 249
+#### Increment:250
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=251"
+STRANDID = 1,SOLUTIONTIME = 251
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 250
+#### Increment:251
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=252"
+STRANDID = 1,SOLUTIONTIME = 252
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 251
+#### Increment:252
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=253"
+STRANDID = 1,SOLUTIONTIME = 253
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 252
+#### Increment:253
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=254"
+STRANDID = 1,SOLUTIONTIME = 254
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 253
+#### Increment:254
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=255"
+STRANDID = 1,SOLUTIONTIME = 255
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 254
+#### Increment:255
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=256"
+STRANDID = 1,SOLUTIONTIME = 256
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 255
+#### Increment:256
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=257"
+STRANDID = 1,SOLUTIONTIME = 257
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 256
+#### Increment:257
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=258"
+STRANDID = 1,SOLUTIONTIME = 258
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 257
+#### Increment:258
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=259"
+STRANDID = 1,SOLUTIONTIME = 259
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 258
+#### Increment:259
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=260"
+STRANDID = 1,SOLUTIONTIME = 260
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 259
+#### Increment:260
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=261"
+STRANDID = 1,SOLUTIONTIME = 261
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 260
+#### Increment:261
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=262"
+STRANDID = 1,SOLUTIONTIME = 262
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 261
+#### Increment:262
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=263"
+STRANDID = 1,SOLUTIONTIME = 263
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 262
+#### Increment:263
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=264"
+STRANDID = 1,SOLUTIONTIME = 264
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 263
+#### Increment:264
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=265"
+STRANDID = 1,SOLUTIONTIME = 265
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 264
+#### Increment:265
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=266"
+STRANDID = 1,SOLUTIONTIME = 266
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 265
+#### Increment:266
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=267"
+STRANDID = 1,SOLUTIONTIME = 267
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 266
+#### Increment:267
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=268"
+STRANDID = 1,SOLUTIONTIME = 268
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 267
+#### Increment:268
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=269"
+STRANDID = 1,SOLUTIONTIME = 269
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 268
+#### Increment:269
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=270"
+STRANDID = 1,SOLUTIONTIME = 270
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 269
+#### Increment:270
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=271"
+STRANDID = 1,SOLUTIONTIME = 271
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 270
+#### Increment:271
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=272"
+STRANDID = 1,SOLUTIONTIME = 272
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 271
+#### Increment:272
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=273"
+STRANDID = 1,SOLUTIONTIME = 273
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 272
+#### Increment:273
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=274"
+STRANDID = 1,SOLUTIONTIME = 274
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 273
+#### Increment:274
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=275"
+STRANDID = 1,SOLUTIONTIME = 275
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 274
+#### Increment:275
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=276"
+STRANDID = 1,SOLUTIONTIME = 276
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 275
+#### Increment:276
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=277"
+STRANDID = 1,SOLUTIONTIME = 277
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 276
+#### Increment:277
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=278"
+STRANDID = 1,SOLUTIONTIME = 278
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 277
+#### Increment:278
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=279"
+STRANDID = 1,SOLUTIONTIME = 279
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 278
+#### Increment:279
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=280"
+STRANDID = 1,SOLUTIONTIME = 280
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 279
+#### Increment:280
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=281"
+STRANDID = 1,SOLUTIONTIME = 281
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 280
+#### Increment:281
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=282"
+STRANDID = 1,SOLUTIONTIME = 282
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 281
+#### Increment:282
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=283"
+STRANDID = 1,SOLUTIONTIME = 283
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 282
+#### Increment:283
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=284"
+STRANDID = 1,SOLUTIONTIME = 284
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 283
+#### Increment:284
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=285"
+STRANDID = 1,SOLUTIONTIME = 285
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 284
+#### Increment:285
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=286"
+STRANDID = 1,SOLUTIONTIME = 286
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 285
+#### Increment:286
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=287"
+STRANDID = 1,SOLUTIONTIME = 287
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 286
+#### Increment:287
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=288"
+STRANDID = 1,SOLUTIONTIME = 288
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 287
+#### Increment:288
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=289"
+STRANDID = 1,SOLUTIONTIME = 289
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 288
+#### Increment:289
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=290"
+STRANDID = 1,SOLUTIONTIME = 290
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 289
+#### Increment:290
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=291"
+STRANDID = 1,SOLUTIONTIME = 291
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 290
+#### Increment:291
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=292"
+STRANDID = 1,SOLUTIONTIME = 292
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 291
+#### Increment:292
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=293"
+STRANDID = 1,SOLUTIONTIME = 293
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 292
+#### Increment:293
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=294"
+STRANDID = 1,SOLUTIONTIME = 294
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 293
+#### Increment:294
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=295"
+STRANDID = 1,SOLUTIONTIME = 295
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 294
+#### Increment:295
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=296"
+STRANDID = 1,SOLUTIONTIME = 296
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 295
+#### Increment:296
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=297"
+STRANDID = 1,SOLUTIONTIME = 297
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 296
+#### Increment:297
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=298"
+STRANDID = 1,SOLUTIONTIME = 298
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 297
+#### Increment:298
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=299"
+STRANDID = 1,SOLUTIONTIME = 299
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 298
+#### Increment:299
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003
+
+ZONE
+DATAPACKING = BLOCK, ZONETYPE = FEBRICK, T = "Step=1 Inc=300"
+STRANDID = 1,SOLUTIONTIME = 300
+NODES= 10
+ELEMENTS= 1
+VARSHARELIST = ([1,2,3]=1)
+CONNECTIVITYSHAREZONE = 299
+#### Increment:300
+#### Temperature
+           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J           -1.#J
+          1e+003          1e+003

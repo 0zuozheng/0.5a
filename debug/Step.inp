@@ -1,6 +1,6 @@
 ** ----------------------------------------------------------------
 ** 
-** STEP: Step-2
+** STEP: Step-Deact
 ** 
 *Step, name=Step-2, inc=1000000
 *Heat Transfer, end=PERIOD
@@ -9,8 +9,6 @@
 ** INTERACTIONS
 ** 
 ** Interaction: Int-1
-*Boundary, amplitude=Amp-1
-NSet-fix, 11, 11, 0.0
 ** 
 ** OUTPUT REQUESTS
 ** 

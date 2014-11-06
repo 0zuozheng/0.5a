@@ -119,7 +119,7 @@ void Tstep(int ln,int ptn,int pn, float dt) //Called by Displacement.  ln -> loa
 	fprintf(log_solver,"step = %d, period = %d, dalt = %f\n",ln,pn+1,dt);
 	SolveWrite(ln,pn);
 	Tecplot(ln,pn,ptn);		//Tecplot
-	NodWrite(ptn,223);
+	NodWrite(ptn,2);
 }
 
 void Insert(int row, int col, float value)

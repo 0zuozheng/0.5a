@@ -1,5 +1,5 @@
 **Set Num = 1 Surface Num = 1
 *Elset, elset=_Surf-1_S4, internal, instance=Part-1-1, generate
-   5,  125,    5
+   1,  1,    1
 *Surface, type=ELEMENT, name=Surf-1
 _Surf-1_S4, S4

@@ -33,7 +33,7 @@ void CalcRotate(float* a,float* b){
 
 	// 计算叉积、点积，最后利用Rodrigues旋转公式计算旋转矩阵
 	CrossProduct(Rot_Axis,a,b);
-	cos_Rot_Angle = DotProduct(a,b)/(Normal(a)*Normal(b));
+	cos_Rot_Angle = DotProduct(a,b)/(Modulus(a)*Modulus(b));
 	Rodrigues(cos_Rot_Angle, Rot_Axis);
 
 	// 记录旋转矩阵
@@ -66,7 +66,7 @@ void CalcCoordinate(float* a,float* n,float* rMat,float* tMat){
 }
 
 void Rodrigues(float cos_theta, float* k){
-	float norm = Normal(k);
+	float norm = Modulus(k);
 	extern float rotatinMatrix[9];
 	float sin_theta = sin(acos(cos_theta));
 

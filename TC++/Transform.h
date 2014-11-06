@@ -9,7 +9,7 @@ extern float rotatinMatrix[9];
 extern float translateMatrix[3];
 
 // Matrix.cpp
-extern float Normal(float* a);
+extern float Modulus(float* a);
 extern float NomalizeVector (float*,float*,float*);
 extern void  CrossProduct(float*,float*,float*);
 extern float DotProduct(float* a,float* b);

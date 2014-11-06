@@ -9,7 +9,7 @@ void Tface(int ln,int en,int facenum,int LoadId) //ln -> loadcase_now; en -> ele
 	int j,k,l,r,k1,k2,k3,m;
 	float xyz[3],st[3][2],*sf_,**dsf_,intergral_x,intergral_y,intergral_z,tmp;
 	m=material_e[en];
-	GetNodeXYZ(8,en);
+	GetEleXYZ(8,en);
 
 	sf_ = new float[8];		 Alloc2DArray_float(&dsf_,3,8);
 
@@ -22,14 +22,15 @@ void Tface(int ln,int en,int facenum,int LoadId) //ln -> loadcase_now; en -> ele
 			for(k=0;k<3;k++)
 			{
 				xyz[k3]=i3[k];
-				GetSfDsf(xyz[0],xyz[1],xyz[2],sf_,dsf_);	// »ñµÃ (Æ«N/Æ«epsilon)
+				GetSf(xyz[0],xyz[1],xyz[2],sf_);	// »ñµÃ (Æ«N/Æ«epsilon)
+				GetDsf(xyz[0],xyz[1],xyz[2],dsf_);	// »ñµÃ (Æ«N/Æ«epsilon)
 				for(l=0;l<3;l++)
 					for(r=0;r<2;r++) st[l][r]=0;
 				for(l=0;l<8;l++)
 				{	// (Æ«x/Æ«epsilon)=(Æ«N/Æ«epsilon)*x0+(Æ«N/Æ«epsilon)*x1+...(Æ«N/Æ«epsilon)*x7
-					st[0][0]+=dsf_[k2][l]*nodexyz_e[0][l];  st[0][1]+=dsf_[k3][l]*nodexyz_e[0][l];
-					st[1][0]+=dsf_[k2][l]*nodexyz_e[1][l];  st[1][1]+=dsf_[k3][l]*nodexyz_e[1][l];
-					st[2][0]+=dsf_[k2][l]*nodexyz_e[2][l];  st[2][1]+=dsf_[k3][l]*nodexyz_e[2][l];
+					st[0][0]+=dsf_[k2][l]*nodeXYZ_e[l][0];  st[0][1]+=dsf_[k3][l]*nodeXYZ_e[l][0];
+					st[1][0]+=dsf_[k2][l]*nodeXYZ_e[l][1];  st[1][1]+=dsf_[k3][l]*nodeXYZ_e[l][1];
+					st[2][0]+=dsf_[k2][l]*nodeXYZ_e[l][2];  st[2][1]+=dsf_[k3][l]*nodeXYZ_e[l][2];
 				}
 				intergral_x=st[1][0]*st[2][1]-st[1][1]*st[2][0];
 				intergral_y=st[2][0]*st[0][1]-st[0][0]*st[2][1];

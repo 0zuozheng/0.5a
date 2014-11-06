@@ -20,18 +20,23 @@ float DotProduct(float* a,float* b){
     return result;
 }
 
-float Normal(float* a){
+float Modulus(float* a){
 	float result;
 	result = sqrt(a[0] * a[0] + a[1] * a[1] + a[2] * a[2]);
 
     return result;
 }
 
+void Normalize(float *a){
+	float Norm = Modulus(a);
+	for(int i=0;i<3;i++)	a[i] /= Norm;
+}
+
 float NomalizeVector (float* AB,float* A,float* B){
 	for (int i=0;i<3;i++){
 		AB[i] = B[i] - A[i];
 	}
-	float norm = Normal(AB);
+	float norm = Modulus(AB);
 	for (int i=0;i<3;i++){
 		AB[i] = AB[i]/norm;
 	}

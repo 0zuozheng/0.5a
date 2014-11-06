@@ -20,8 +20,6 @@ int **surf_e;//单元面信息ElementFace
 	
 int boundarynum_c=0,*num_b,**list_b,*table_b;	//边界条件 Boundary
 float *fix_b;
-//int *node_b;
-//float *fix_b;
 
 int incnum_c,inc_l, *deactive_l, maxelement_l;//工况信息 Loadcase
 float timeinc_l, totaltime_l; 
@@ -29,7 +27,7 @@ char name_l[500];
 
 int tablenum_c;
 
-int pipenum_c,*pts_p;
+int pipenum_c,*pts_p,*pipe_e;
 float ***xyz_p;
 
 char **name_elset, **name_nset;		// 组信息 Set

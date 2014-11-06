@@ -45,23 +45,28 @@ void Read_Element(FILE *in){	int num,id;	char cmd[10][500], tmp[500];	char* p;
 	KeywordElement(cmd,num,0);	// 解析关键字
 
 	material_e=(int*)calloc(elementnum_c,sizeof(int));		Alloc2DArray_int(&node_e,elementnum_c,8);
-	class_e   =(int*)calloc(elementnum_c,sizeof(int));		plan_e = (int*)calloc(elementnum_c,sizeof(int));		
-	t_e       =(float*)calloc(elementnum_c,sizeof(float));
+	class_e   =(int*)calloc(elementnum_c,sizeof(int));		plan_e = (int*)calloc(elementnum_c,sizeof(int));
+	t_e       =(float*)calloc(elementnum_c,sizeof(float));	pipe_e = (int*)calloc(elementnum_c,sizeof(int));
 
 	for(int i=0;i<elementnum_c;i++){
 		RnWinp(in,out,tmp);		p = strtok(tmp,",");	sscanf(p,"%d,",&id);
 		fprintf(log_check,"%5d",id);	id--;	//单元号
 
 		class_e[id] = 8;		//单元类型
-		plan_e[id]  = 1125;		//积分方案
+		plan_e[id]  = 1008;		//积分方案
+		pipe_e[id]  = 0;
+
+		if(pipe_e[id]==1){
+			node_e[id] = (int*)realloc(node_e[id],10*sizeof(int));
+			node_e[id][8] = 8;
+			node_e[id][9] = 9;
+		}
 
 		for(int j=0;j<8;j++) {
 			p = strtok(NULL,",");	sscanf(p,"%d",&node_e[id][j]);
 			fprintf(log_check,"%7d",node_e[id][j]);
 			node_e[id][j]--;
 		}	fprintf(log_check,"|\n");	//单元拓扑
-
-		//t_e[id] = 12.0;	//ZUOZUO
 	}	fclose(in);
 }
 
@@ -247,7 +252,6 @@ void Read_Table(FILE* in){	int num,id = -1;	char cmd[10][500];
 	fclose(in);
 	Check_Table();
 }
-
 
 void Read_Pipe(FILE *fp){	//读入管线条件
 	int tmp;
