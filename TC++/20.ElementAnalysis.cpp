@@ -6,7 +6,7 @@
 
 #include "ELEMENT.h"
 
-float nodeXYZ_e[10][3], jacobi[3][3], divjacobi[3][3], **det, ***sf, ****dsf, ****dxyzsf;
+float nodeXYZ_e[10][3], jacobi[3][3], divjacobi[3][3], **w, **det, ***sf, ****dsf, ****dxyzsf;
 
 void GetEleXYZ(int nodenum,int en){ //en -> element_now;	¸Ã×Ó³ÌÐòÖ»¼ÆËãµ±Ç°µ¥ÔªµÄNodeÐÅÏ¢£¬Ã¿´Îµ÷ÓÃ¶¼ÖØÖÃÒ»±é
 	for(int i=0;i<nodenum;i++){
@@ -15,17 +15,27 @@ void GetEleXYZ(int nodenum,int en){ //en -> element_now;	¸Ã×Ó³ÌÐòÖ»¼ÆËãµ±Ç°µ¥Ôªµ
 	}
 }
 
+void GetXYZ(float coor[3],float (*XYZ_e)[3],float XYZ[3]){
+	float sf_[8];
+	GetSf(coor[0],coor[1],coor[2],sf_);
+	for(int i=0;i<3;i++)	XYZ[i] = 0.0f;
+
+	for (int i=0;i<8;i++)	XYZ[0] += sf_[i]*XYZ_e[i][0];
+	for (int i=0;i<8;i++)	XYZ[1] += sf_[i]*XYZ_e[i][1];
+	for (int i=0;i<8;i++)	XYZ[2] += sf_[i]*XYZ_e[i][2];
+}
+
 void GetSf(float x, float y, float z, float* sf_){ //x,y,z -> coordinate; sf_ -> ÐÎº¯Êý; dsf -> ÐÎº¯ÊýµÄÆ«µ¼Êý(¾Ö²¿×ø±êÏµ),¼´ (Æ«N/Æ«epsilon).
 	for(int i=0;i<8;i++){
 		sf_[i]=0;
 	}	// Serendipity»ý·Ö, ¡¶ÓÐÏÞµ¥Ôª·¨¡· P114
 	sf_[0]=(1-x)*(1-y)*(1-z)/8;	 sf_[1]=(1+x)*(1-y)*(1-z)/8;    sf_[2]=(1+x)*(1+y)*(1-z)/8;	 sf_[3]=(1-x)*(1+y)*(1-z)/8;
 	sf_[4]=(1-x)*(1-y)*(1+z)/8;	 sf_[5]=(1+x)*(1-y)*(1+z)/8;    sf_[6]=(1+x)*(1+y)*(1+z)/8;	 sf_[7]=(1-x)*(1+y)*(1+z)/8;
-}	//ÒÔÉÏ×Ó³ÌÐòÖÐ¾ùÔÚ¾Ö²¿×ø±êÏµÏÂÌÖÂÛ
+}	// ÒÔÉÏ×Ó³ÌÐòÖÐ¾ùÔÚ¾Ö²¿×ø±êÏµÏÂÌÖÂÛ
 
 void GetDsf(float x, float y, float z, float **dsf_){ //x,y,z -> coordinate; sf_ -> ÐÎº¯Êý; dsf -> ÐÎº¯ÊýµÄÆ«µ¼Êý(¾Ö²¿×ø±êÏµ),¼´ (Æ«N/Æ«epsilon).
 	for(int i=0;i<8;i++){
-		for(int j=0;j<3;j++)  dsf_[j][i]=0;	//¾ØÕóÖÃÁã
+		for(int j=0;j<3;j++)  dsf_[j][i]=0;	// ¾ØÕóÖÃÁã
 	}	// Serendipity»ý·Ö, ¡¶ÓÐÏÞµ¥Ôª·¨¡· P114
 	dsf_[0][0]=-(1-y)*(1-z)/8;	 dsf_[0][1]=(1-y)*(1-z)/8;     dsf_[0][2]=(1+y)*(1-z)/8;	  dsf_[0][3]=-(1+y)*(1-z)/8;
 	dsf_[0][4]=-(1-y)*(1+z)/8;	 dsf_[0][5]=(1-y)*(1+z)/8;     dsf_[0][6]=(1+y)*(1+z)/8;	  dsf_[0][7]=-(1+y)*(1+z)/8;
@@ -33,8 +43,8 @@ void GetDsf(float x, float y, float z, float **dsf_){ //x,y,z -> coordinate; sf_
 	dsf_[1][0]=-(1-x)*(1-z)/8;	 dsf_[1][1]=-(1+x)*(1-z)/8;    dsf_[1][2]=(1+x)*(1-z)/8;	  dsf_[1][3]=(1-x)*(1-z)/8;
 	dsf_[1][4]=-(1-x)*(1+z)/8;	 dsf_[1][5]=-(1+x)*(1+z)/8;    dsf_[1][6]=(1+x)*(1+z)/8;	  dsf_[1][7]=(1-x)*(1+z)/8;
 
-	dsf_[2][0]=-(1-x)*(1-y)/8;	 dsf_[2][1]=-(1+x)*(1-y)/8;	  dsf_[2][2]=-(1+x)*(1+y)/8;	  dsf_[2][3]=-(1-x)*(1+y)/8;
-	dsf_[2][4]=(1-x)*(1-y)/8;	 dsf_[2][5]=(1+x)*(1-y)/8;	  dsf_[2][6]=(1+x)*(1+y)/8;	      dsf_[2][7]=(1-x)*(1+y)/8;
+	dsf_[2][0]=-(1-x)*(1-y)/8;	 dsf_[2][1]=-(1+x)*(1-y)/8;	   dsf_[2][2]=-(1+x)*(1+y)/8;	  dsf_[2][3]=-(1-x)*(1+y)/8;
+	dsf_[2][4]=(1-x)*(1-y)/8;	 dsf_[2][5]=(1+x)*(1-y)/8;	   dsf_[2][6]=(1+x)*(1+y)/8;	      dsf_[2][7]=(1-x)*(1+y)/8;
 }	//ÒÔÉÏ×Ó³ÌÐòÖÐ¾ùÔÚ¾Ö²¿×ø±êÏµÏÂÌÖÂÛ
 
 void GetDetDxyzsf(float *det_, float **dsf_, float **dxyzsf_){ //det ->	JacobiÕóµÄÐÐÁÐÊ½	dxyzsf -> ÐÎº¯ÊýÆ«µ¼(ÕûÌå×ø±êÏµ)
@@ -56,8 +66,7 @@ void GetDetDxyzsf(float *det_, float **dsf_, float **dxyzsf_){ //det ->	JacobiÕó
 		divjacobi[i][j] = jacobi[k][j]*jacobi[i][k]-jacobi[i][j]*jacobi[k][k];
 		divjacobi[j][i] = jacobi[j][k]*jacobi[k][i]-jacobi[j][i]*jacobi[k][k];
 	}
-	*det_ = jacobi[0][0]*divjacobi[0][0]+jacobi[0][1]*divjacobi[1][0]+jacobi[0][2]*divjacobi[2][0];	//¼ÆËãÐÐÁÐÊ½
-	
+	*det_ = jacobi[0][0]*divjacobi[0][0]+jacobi[0][1]*divjacobi[1][0]+jacobi[0][2]*divjacobi[2][0];	//¼ÆËãÐÐÁÐÊ½	
 
 	for(i=0;i<3;i++){
 		for(j=0;j<8;j++){
@@ -70,6 +79,7 @@ void GetDetDxyzsf(float *det_, float **dsf_, float **dxyzsf_){ //det ->	JacobiÕó
 
 void ElementAnalysis(){	// Called by Main.cpp
 	det = (float **)calloc(elementnum_c,sizeof(float *));
+	w   = (float **)calloc(elementnum_c,sizeof(float *));
 	sf  = (float ***)calloc(elementnum_c,sizeof(float **));
 	dsf  = (float ****)calloc(elementnum_c,sizeof(float ***));
 	dxyzsf  = (float ****)calloc(elementnum_c,sizeof(float ***));

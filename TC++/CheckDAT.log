@@ -90,19 +90,4 @@ Table Name : Amp-1
 
 #### INITIAL CONDITION Information
 Elements Temperature
-       1:         10.000----------------------------------------
-#### Step 1 
-
- Step Name : Step-2
- Total time : 300.000000
- Total increments : 300
-
-Deactivated element list :
-
-Face information :
-000000  
-
-Interactive Conditions :
-
-
-Boundary Conditions :
+       1:         10.000

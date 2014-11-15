@@ -1,0 +1,6 @@
+**Element Set Num = 1
+**Node Set Num = 1
+*Elset, elset=ELSet-1, generate
+   1,    1,    1
+*Nset, nset=NSet-1, elset=ELSet-1
+,

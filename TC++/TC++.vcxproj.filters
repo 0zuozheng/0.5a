@@ -86,13 +86,16 @@
     <ClCompile Include="41.ReadStep.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="60.Tecplot.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="61.Write.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="22.LibraryEnrich.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="70.Tecplot.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="71.Write.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="60.Pipe.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

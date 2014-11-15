@@ -25,7 +25,7 @@ void Tstep(int ln,int ptn,int pn, float dt) //Called by Displacement.  ln -> loa
 	for(i=0;i<equationnum;i++)	NumCols[i] = 0;
 	nonzero=0;
 	for(i=0;i<elementnum_c;i++){
-		int num = class_e[i];
+		int num = NodeNum_e[i];
 		Qtotal = (float *)calloc(num,sizeof(float));
 		m=material_e[i];
 		begintime=time_e[i];  endtime=begintime+dt;
@@ -122,8 +122,7 @@ void Tstep(int ln,int ptn,int pn, float dt) //Called by Displacement.  ln -> loa
 	NodWrite(ptn,2);
 }
 
-void Insert(int row, int col, float value)
-{
+void Insert(int row, int col, float value){
 	if(row>=col){	// 位于下三角阵中
 		int NewCol=0;
 		for(int i=0;i<NumCols[row];i++){
@@ -142,13 +141,10 @@ void Insert(int row, int col, float value)
 	}
 }
 
-void SolveWrite(int ln,int pn) //ln -> loadcase_now; pn -> period_now
-{
-	int i,j,k=0;
+void SolveWrite(int ln,int pn){ //ln -> loadcase_now; pn -> period_now
+	int i,j,k=0;	Imsl_f_sparse_elem *A;
 
-	Imsl_f_sparse_elem *A;
-
-	A=new Imsl_f_sparse_elem[nonzero];
+	A = new Imsl_f_sparse_elem[nonzero];
 
 	fprintf(log_solver,"\n--------A---------\n");
 	for(i=0;i<equationnum;i++){
@@ -167,6 +163,7 @@ void SolveWrite(int ln,int pn) //ln -> loadcase_now; pn -> period_now
 	for (i=0;i<equationnum;i++)
 		fprintf(log_solver,"%2d%16.5f\n",i+1,B[i]);
 	fprintf(log_solver,"\n----------X--------\n");
+	fclose(log_solver);		log_solver = fopen("Solver.log","a");
 
 	X = imsl_f_lin_sol_posdef_coordinate (equationnum, k, A, B, 0);
 

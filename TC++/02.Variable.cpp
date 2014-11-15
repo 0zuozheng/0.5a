@@ -14,7 +14,7 @@ char **name_m;
 
 float **xyz_n, *t_n;//结点信息Node
 
-int *material_e, **node_e, *class_e, *plan_e;//单元信息Element
+int *material_e, **node_e, *class_e, *NodeNum_e, *plan_e, *PointNum_e, ***LMN_Pipe_e;//单元信息Element
 float *t_e;
 int **surf_e;//单元面信息ElementFace
 	

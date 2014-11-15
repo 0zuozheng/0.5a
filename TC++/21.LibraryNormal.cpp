@@ -26,8 +26,8 @@ void write_element(int en, int in, int classnum){
 	}
 }
 
-void N_Gauss(int en, int order, int GaussNum, float Qi[][3]){
-	fprintf(log_N,"\nElementID: [%d] Class: %d Gauss Type: %d\n{",en,class_e[en],plan_e[en]);
+void N_Gauss(int en, int GaussNum, float Qi[][3]){
+	fprintf(log_N,"\nElementID: [%d] Class: %d Integral Order: %d\n{",en,NodeNum_e[en],plan_e[en]);
 	GetEleXYZ(8,en);	// 获取结点坐标
 
 	det[en] = (float *)calloc(GaussNum,sizeof(float));		Alloc2DArray_float(&sf[en],GaussNum,8);
@@ -42,10 +42,11 @@ void N_Gauss(int en, int order, int GaussNum, float Qi[][3]){
 }
 
 void ShapeFunc_normal(int en){
-	if (plan_e[en]==1008)	N_Gauss(en,0, 8,i2x2x2_);
-	if (plan_e[en]==1027)	N_Gauss(en,0,27,i3x3x3_);
-	if (plan_e[en]==1064)	N_Gauss(en,0,64,i4x4x4_);
-	if (plan_e[en]==1125)	N_Gauss(en,0,125,i5x5x5_);
+	PointNum_e[en] = plan_e[en]*plan_e[en]*plan_e[en];
+	if (plan_e[en]==2)	N_Gauss(en,PointNum_e[en],i2x2x2_);	// 2阶精度
+	if (plan_e[en]==3)	N_Gauss(en,PointNum_e[en],i3x3x3_);	// 3阶精度
+	if (plan_e[en]==4)	N_Gauss(en,PointNum_e[en],i4x4x4_);	// 4阶精度
+	if (plan_e[en]==5)	N_Gauss(en,PointNum_e[en],i5x5x5_);	// 5阶精度
 }
 
 void FreeShape(){

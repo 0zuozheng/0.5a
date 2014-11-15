@@ -13,7 +13,7 @@ extern char **name_m;
 extern float **xyz_n, *t_n;
 
 //单元信息Element
-extern int *material_e, **node_e, *class_e,*plan_e;
+extern int *material_e, **node_e, *NodeNum_e, *plan_e, *PointNum_e, ***LMN_Pipe_e;
 extern float *t_e;
 extern int **surf_e;
 

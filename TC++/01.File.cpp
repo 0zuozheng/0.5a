@@ -2,7 +2,7 @@
 #include <fstream>
 using namespace std;
 
-FILE *log_answer, *log_solver, *log_element, *log_N, *log_check, *log_transform;	//数据输出校核文件流
+FILE *log_answer, *log_solver, *log_element, *log_N, *log_check, *log_transform, *log_bound, *log_enrich;	//数据输出校核文件流
 FILE *inp_material, *inp_element, *inp_node, *inp_pipe, *inp_loadcase, *inp_table, *inp_set, *inp_section, *inp_initial, *inp_surface, *inp_step;	//数据输入文件流
 FILE *out;
 FILE *DEBUG;
@@ -23,6 +23,12 @@ void File(){
 
 	log_N = fopen("N_shape.log","w");
 	fprintf(log_N,"%s\n*** This log file includes the shape function matrix.\n\n",DTFS);
+
+	log_enrich = fopen("Enrich.inp","w");
+	fprintf(log_enrich,"*Node\n");
+
+	log_bound = fopen("Bound.log","w");
+	fprintf(log_bound,"%s\n*** This log file includes the shape function matrix.\n\n",DTFS);
 
 	log_check = fopen("CheckDAT.log","w");
 	fprintf(log_check,"%s\n\n",DTFS);

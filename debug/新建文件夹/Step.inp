@@ -1,0 +1,18 @@
+** ----------------------------------------------------------------
+** 
+** STEP: Step-Deact
+** 
+*Step, name=Step-2, inc=1000000
+*Heat Transfer, end=PERIOD
+1., 300., , , 
+** 
+** INTERACTIONS
+** 
+** Interaction: Int-1
+** 
+** OUTPUT REQUESTS
+** 
+*Restart, write, frequency=0
+*Output, field, variable=PRESELECT
+*Output, history, frequency=0
+*End Step

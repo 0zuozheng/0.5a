@@ -89,16 +89,17 @@
     <ClCompile Include="30.GeometryAnalysis.cpp" />
     <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="41.ReadStep.cpp" />
+    <ClCompile Include="60.Pipe.cpp" />
     <ClCompile Include="Result.cpp" />
     <ClCompile Include="50.Solve.cpp" />
     <ClCompile Include="31.Rotate.cpp" />
-    <ClCompile Include="60.Tecplot.cpp" />
+    <ClCompile Include="70.Tecplot.cpp" />
     <ClCompile Include="43.TFace.cpp" />
     <ClCompile Include="Tool.cpp" />
     <ClCompile Include="02.Variable.cpp" />
     <ClCompile Include="00.Version.cpp" />
     <ClCompile Include="14.Warning.cpp" />
-    <ClCompile Include="61.Write.cpp" />
+    <ClCompile Include="71.Write.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Construct.h" />
