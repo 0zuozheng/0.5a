@@ -3,7 +3,7 @@
 using namespace std;
 
 FILE *log_answer, *log_solver, *log_element, *log_N, *log_check, *log_transform, *log_bound, *log_enrich;	//数据输出校核文件流
-FILE *inp_material, *inp_element, *inp_node, *inp_pipe, *inp_loadcase, *inp_table, *inp_set, *inp_section, *inp_initial, *inp_surface, *inp_step;	//数据输入文件流
+FILE *inp_material, *inp_element, *inp_node, *inp_pipe, *inp_loadcase, *inp_table, *inp_set, *inp_section, *inp_initial, *inp_surface, *inp_step, *inp_cooling;	//数据输入文件流
 FILE *out;
 FILE *DEBUG;
 
@@ -25,7 +25,6 @@ void File(){
 	fprintf(log_N,"%s\n*** This log file includes the shape function matrix.\n\n",DTFS);
 
 	log_enrich = fopen("Enrich.inp","w");
-	fprintf(log_enrich,"*Node\n");
 
 	log_bound = fopen("Bound.log","w");
 	fprintf(log_bound,"%s\n*** This log file includes the shape function matrix.\n\n",DTFS);
@@ -46,7 +45,7 @@ void File(){
 	inp_step		= fopen("Step.inp","r");
 	inp_initial     = fopen("Initial.inp","r");
 	inp_pipe		= fopen("Pipe.inp","r");
-	fclose(inp_pipe);
+	inp_cooling		= fopen("Cooling.inp","r");
 
 	/* Output Job.inp file for abaqus */
 	out				= fopen("Job.inp","w");

@@ -1,55 +1,18 @@
 #include "ELEMENT.h"
-
-extern float Rb_p;
-extern float Modulus(float*);
-extern void Normalize(float*);
-extern int PointPerTri[8];
 extern FILE *log_enrich;
+extern int PointPrismX4[4][6];
+extern float LMN_Prism[6][3];
+extern int PointPerTri[8];
+extern float LMN_Node8[10][3];
+extern void Enrichsf(float[3],float,float*);
+extern void Enrichdxyzdsf(float,float*,float*,float**,float*,float**);
+extern void circular(float[3],float[3],float[3],float*,float[3]);
+extern int GetCrossDir(float**);
+extern void GetPrismLMN(int,int,int*);
 
-float LMN_Node8[10][3] = // LMN:´ú±í¾Ö²¿×ø±ê
-{{-1,-1,-1},
- { 1,-1,-1},
- { 1, 1,-1},
- {-1, 1,-1},
- {-1,-1, 1},
- { 1,-1, 1},
- { 1, 1, 1},
- {-1, 1, 1}};
-
-int NodeOnFace[6][4] = 
-{{3,2,1,0},
- {4,5,6,7},
- {4,0,1,5},
- {5,1,2,6},
- {6,2,3,7},
- {7,3,0,4}};
-
-int Prism35[4][6] =
-{{0,8,1,3,9,2},
- {4,8,0,7,9,3},
- {1,8,5,2,9,6},
- {5,8,4,6,9,7}};
-
-int Prism46[4][6] = 
-{{1,8,2,0,9,3},
- {5,8,1,4,9,0},
- {2,8,6,3,9,7},
- {6,8,5,7,9,4}};
-
-int Prism12[4][6] =
-{{3,8,2,7,9,6},
- {2,8,1,6,9,5},
- {1,8,0,5,9,4},
- {0,8,3,4,9,7}};
-
-int Axis_Of_Face[66];
-int PointPrism[6];
-int PointPrismX4[4][6];
-float LMN_Prism[6][3];
-
-void write_element_Hammer(int en, int in, int classnum,float r,float dir[3]){	// in: integral point
-	fprintf(log_N,"\n*********  Gauss Point [%d]  *********\n",in);
-	float xx=0,yy=0,zz=0;
+void write_element_Hammer(int en, int in, int classnum, float r, float dir[3]){	// in: integral point
+	fprintf(log_N,"\n*********  Hammer Point [%d]  *********\n",in);
+	float xx=0, yy=0, zz=0;
 	for (int k=0;k<8;k++){
 		xx += sf[en][in][k]*nodeXYZ_e[k][0];	yy += sf[en][in][k]*nodeXYZ_e[k][1];	zz += sf[en][in][k]*nodeXYZ_e[k][2];
 	}fprintf(log_N,"Location£ºx = %7.4f, y = %7.4f, z = %7.4f\n",xx,yy,zz);
@@ -67,133 +30,32 @@ void write_element_Hammer(int en, int in, int classnum,float r,float dir[3]){	//
 		for (int l=0;l<classnum;l++)	fprintf(log_N,"%7.4f\t",dxyzsf[en][in][k][l]);		
 	}
 	fprintf(log_N,"\nWeight w : %7.4f\n",w[en][in]);
-	fprintf(log_N,"Det det : %7.4f\n",det[en][in]);
+	fprintf(log_N,"Det det : %7.4f\n",det[en][in]);	
 }
 
-void GetLMNofPrism(int Prism[4][6],int no,int *NodeList){
-	for (int j=0;j<6;j++){
-		PointPrism[j] = NodeList[Prism[no][j]];
-		PointPrismX4[no][j] = PointPrism[j];
-		for(int k=0;k<3;k++){
-			LMN_Prism[j][k]=LMN_Node8[Prism[no][j]][k];
-		}
-	}
-}
-
-void GetPrismLMN(int CrossFace,int no,int *NodeList){	// Triangular prism: 2 triangles and 3 squares
-	int No = 0;
-	if (CrossFace==35)	GetLMNofPrism(Prism35,no,NodeList);
-	if (CrossFace==46)	GetLMNofPrism(Prism46,no,NodeList);
-	if (CrossFace==12)	GetLMNofPrism(Prism12,no,NodeList);
-}
-
-void circular(float XYZ[3],float P1[3],float P2[3],float *r,float d[3]){ // Ò»¶¨ÒªÔÚÍ¬Ò»×ø±êÏµÏÂ£¬¼´Ë®¹Ü½áµãºÍ»ı·Öµã¶¼ÔÚÈ«¾Ö×ø±êÏµ
-	float PI = 3.1415926;	float XYZ_0[3]; float sum=0.0;
-	float gx = XYZ[0]-P1[0],  gy = XYZ[1]-P1[1], gz = XYZ[2]-P1[2];
-	float lx = P2[0]-P1[0],   ly = P2[1]-P1[1],  lz = P2[2]-P1[2];
-	float A = (lx*gx+ly*gy+lz*gz)/(lx*lx+ly*ly+lz*lz);
-	XYZ_0[0] = A*lx + P1[0];
-	XYZ_0[1] = A*ly + P1[1];
-	XYZ_0[2] = A*lz + P1[2];
-	for(int i=0;i<3;i++)
-		d[i] = XYZ[i] - XYZ_0[i];
-	*r = Modulus(d);
-	Normalize(d);
-	*r /= Rb_p;
-}
-
-void Enrichsf(float x,float y,float z,float r,float *sf_){ // ·á¸»ĞÎº¯Êı
-	GetSf(x,y,z,sf_);	// Ç°8Ïî
-
-	float b = 6.4f;	// ZUOZUOZ
-	float phi = - exp(-b*r); // f(r)=-exp(-b*r), b=6.4
-	
-	for (int i=0;i<8;i++)	sf_[i+8] = phi*sf_[i];	// À©³äĞÎº¯Êı
-}
-
-void Enrichdxyzdsf(float x,float y, float z, float r,float *dir,float *sf_,float **dsf_,float *det_,float **dxydsf_){
-	float **dxydsf_t, dphi[3];
-	Alloc2DArray_float(&dxydsf_t,3,8);
-	GetDetDxyzsf(det_,dsf_,dxydsf_t);
-
-	float b=6.4;
-	float phi = - exp(-b*r);
-
-	extern float Rb_p;
-
-	dphi[0] = b*exp(-b*r)*dir[0]/Rb_p;
-	dphi[1] = b*exp(-b*r)*dir[1]/Rb_p;
-	dphi[2] = b*exp(-b*r)*dir[2]/Rb_p;
-
-	
-
-	for (int i=0;i<3;i++){
-		for(int j=0;j<8;j++){
-			dxydsf_[i][j] = dxydsf_t[i][j];
-			dxydsf_[i][j+8] = phi*dxydsf_[i][j] + dphi[i]*sf_[j];
-		}
-	}
-}
-
-int N_Hammer(int en, int order, int GaussNum, float Qi[][4], float Wi[]){	// ¹Üµã×ø±êÒÑ¾­º¬ÔÚnode_e[8],node_e[9]ÖĞ
-	int CrossFace = 12;
-	int TriNum = 4;
-	int PointNum = TriNum * GaussNum;
-
-	det[en] = (float *)calloc(PointNum,sizeof(float));		w[en] = (float *)calloc(PointNum,sizeof(float));
-	Alloc2DArray_float(&sf[en],PointNum,8*2);
-	Alloc3DArray_float(&dsf[en],PointNum,3,8);				Alloc3DArray_float(&dxyzsf[en],PointNum,3,8*2);
-
-	LMN_Pipe_e[en][0][0] = 0;	LMN_Pipe_e[en][0][1] =  0;	LMN_Pipe_e[en][0][2] = -1;
-	LMN_Pipe_e[en][1][0] = 0;	LMN_Pipe_e[en][1][1] =  0;	LMN_Pipe_e[en][1][2] =  1;
-	
-	for(int i=0;i<2;i++){	// Á½¸ö¹Ü½áµã
+void AddPipeNode(int en,float **LMN){		float XYZ[3];
+	extern FILE *out;	fprintf(out,"*Node\n");
+	int n = pipe_nodenum_c;
+	Realloc2DArray_float(&xyz_n, n, n+2, 3);	
+	for (int i=0;i<2;i++){
+		node_e[en][i+8] = n+i;			fprintf(out,"%d ",n+i+1);
+		GetXYZ(LMN[i],nodeXYZ_e,XYZ);
 		for(int j=0;j<3;j++){
-			LMN_Node8[i+8][j] = LMN_Pipe_e[en][i][j];
-		}
+			xyz_n[n+i][j] = XYZ[j];		fprintf(out,", %.2f ",XYZ[j]);
+		}fprintf(out,"\n");
 	}
-	
-	GetEleXYZ(10,en);	// »ñÈ¡½áµã×ø±ê
-	for(int i=0;i<10;i++){
-		fprintf(log_enrich,"%d, %f, %f, %f\n", node_e[en][i]+1, nodeXYZ_e[i][0], nodeXYZ_e[i][1], nodeXYZ_e[i][2]);
-	}
+	pipe_nodenum_c += 2;
 
-	for(int i=0;i<TriNum;i++){
-		GetPrismLMN(CrossFace,i,node_e[en]);
-		for(int j=0;j<6;j++){
-			for(int k=0;k<3;k++){
-				fprintf(DEBUG,"%f\t",LMN_Prism[j][k]);
-			}	fprintf(DEBUG,"\n");
-		}
+	for(int i=0;i<2;i++)	// 2¸ö¹Ü½áµã
+		for(int j=0;j<3;j++)// 3¸ö·½Ïò
+			LMN_Node8[i+8][j] = LMN[i][j];
+}
 
-		float volume = 2.0 / 2;
-
-		for(int j=0;j<GaussNum;j++){
-			int PointID = i*GaussNum + j;
-			float r,dir[3],LMN_local[2][3]={0.0},XYZ_global[3]={0.0},coor[3];
-
-			for(int k=0; k<2; k++)			//ÏÈÔÚÁ½¸öÈı½ÇĞÎÉÏÈ·¶¨»ı·ÖµãÎ»ÖÃ
-				for(int p=k*3; p<(k+1)*3; p++) //Èı¸öµã
-					for(int x=0;x<3;x++) //Èı¸ö×ø±ê·ÖÁ¿
-						LMN_local[k][x] += Qi[j][p%3] * LMN_Prism[p][x];
-
-			for(int l=0;l<3;l++)
-				coor[l] = (1 - Qi[j][3])*LMN_local[0][l]/2 + (1 + Qi[j][3])*LMN_local[1][l]/2;	// ÏßĞÔ²åÖµ
-
-			GetXYZ(coor,nodeXYZ_e,XYZ_global);		// »ñµÃÈ«¾Ö×ø±ê
-			circular(XYZ_global,nodeXYZ_e[8],nodeXYZ_e[9],&r,dir); // ¼ÆËãÈ«¾Ö×ø±êÏÂµÄ°ë¾¶
-						
-			Enrichsf(coor[0],coor[1],coor[2],r,sf[en][PointID]);
-			GetDsf(coor[0],coor[1],coor[2],dsf[en][PointID]);
-			Enrichdxyzdsf(coor[0],coor[1],coor[2],r,dir,sf[en][PointID],dsf[en][PointID],&det[en][PointID],dxyzsf[en][PointID]);
-			w[en][PointID] = volume * Wi[j];
-
-			write_element_Hammer(en,PointID,16,r,dir);
-			fprintf(log_enrich,"**, %f, %f, %f\n",coor[0],coor[1],coor[2]);	// Êä³ö»ı·Öµã -> ½áµã
-			fprintf(log_enrich,"%d, %f, %f, %f\n",100+PointID,XYZ_global[0],XYZ_global[1],XYZ_global[2]);	// Êä³ö»ı·Öµã -> ½áµã
-		}		
-	}
-	fprintf(log_enrich,"*Element, type=C3D6\n");
+void Write_PipeTopo(int en){
+/*** ¼ÇÂ¼Ë®¹ÜÍØÆËµ½enrich.inpÖĞµÈ´ıAbq¶ÁÈëÑéÖ¤ **/	
+	fprintf(log_enrich,"*Node\n");
+	for(int i=0;i<10;i++)	fprintf(log_enrich,"%d, %f, %f, %f\n", node_e[en][i]+1, nodeXYZ_e[i][0], nodeXYZ_e[i][1], nodeXYZ_e[i][2]);	
+	fprintf(log_enrich,"*Element, type=C3D6\n");	
 	for(int i=0;i<4;i++){
 		fprintf(log_enrich,"%d,",i+1);
 		for(int j=0;j<6;j++){
@@ -201,6 +63,56 @@ int N_Hammer(int en, int order, int GaussNum, float Qi[][4], float Wi[]){	// ¹Üµ
 		}	fprintf(log_enrich,"\n");
 	}fclose(log_enrich);
 	log_enrich = fopen("enrich.inp","a");
+}
+
+void Get_r_dir(int PointID, float Q[4], float coor[3], float *r, float dir[3]){
+	float LMN_local[2][3]={0.0},XYZ_global[3]={0.0};
+	for(int k=0; k<2; k++)			//ÏÈÔÚÁ½¸öÈı½ÇĞÎÉÏÈ·¶¨»ı·ÖµãÎ»ÖÃ
+		for(int p=k*3; p<(k+1)*3; p++) //Èı¸öµã
+			for(int x=0;x<3;x++) //Èı¸ö×ø±ê·ÖÁ¿
+				LMN_local[k][x] += Q[p%3] * LMN_Prism[p][x];
+	for(int l=0;l<3;l++)
+		coor[l] = (1 - Q[3])*LMN_local[0][l]/2 + (1 + Q[3])*LMN_local[1][l]/2;	// ÏßĞÔ²åÖµ
+
+	GetXYZ(coor,nodeXYZ_e,XYZ_global);		// »ñµÃÈ«¾Ö×ø±ê
+	circular(XYZ_global, nodeXYZ_e[8], nodeXYZ_e[9], r, dir); // ¼ÆËãÈ«¾Ö×ø±êÏÂµÄ°ë¾¶
+	fprintf(log_enrich,"%d, %f, %f, %f\n",10000+PointID,XYZ_global[0],XYZ_global[1],XYZ_global[2]);	// Êä³ö»ı·Öµã -> ½áµã
+}
+
+int N_Hammer(int en, int order, int GaussNum, float Qi[][4], float Wi[]){	// ¹Üµã×ø±êÒÑ¾­º¬ÔÚ LMN_Pipe_e[en][0/1][0/1/2] ÖĞ, Qi°üº¬Èı¸öÃæ»ı×ø±ê£¬Ò»¸öÖáÏò×ø±ê
+	int TriNum = 4;		int PointNum = TriNum * GaussNum;
+	det[en] = (float *)calloc(PointNum,sizeof(float));		w[en] = (float *)calloc(PointNum,sizeof(float));
+	Alloc2DArray_float(&sf[en],PointNum,8*2);
+	Alloc3DArray_float(&dsf[en],PointNum,3,8);				Alloc3DArray_float(&dxyzsf[en],PointNum,3,8*2);
+
+	GetEleXYZ(8,en);	// »ñÈ¡½áµã×ø±ê
+	LMN_Pipe_e[en][0][0] = 0;	LMN_Pipe_e[en][0][1] =  0;	LMN_Pipe_e[en][0][2] = -1;	// ZUOZUO ÕâÀïµÄÏÈºóË³ĞòÒÔºóÒªÓĞÂß¼­»¯
+	LMN_Pipe_e[en][1][0] = 0;	LMN_Pipe_e[en][1][1] =  0;	LMN_Pipe_e[en][1][2] =  1;	// ZUOZUO Í¨¹ıÕâ¸öÊı×éÊµ¼ÊÉÏ¾Í¿ÉÒÔÅĞ¶ÏCross·½Ïò
+	int CrossFace = GetCrossDir(LMN_Pipe_e[en]);
+
+	AddPipeNode(en,LMN_Pipe_e[en]);	// ZUOZUO Õâ²½ÔÚÎ´À´È¡Ïû£¬±¾À´Õâ¸öĞÅÏ¢¾ÍÓ¦¸ÃÔÚPipeGeometryÖĞ½â¾ö
+	GetEleXYZ(10,en);
+
+	for(int i=0;i<TriNum;i++){
+		float volume = 2.0 / 2;	// ZUOZUO Õâ²½Òª»»³ÉÌå»ı¼ÆËã
+		GetPrismLMN(CrossFace,i,node_e[en]);
+		for(int j=0;j<GaussNum;j++){
+			float r, dir[3], LMN[3];
+			int PointID = i*GaussNum + j;
+			Get_r_dir(PointID, Qi[j], LMN, &r, dir);
+			Enrichsf(LMN,r,sf[en][PointID]);
+			GetDsf(LMN[0],LMN[1],LMN[2],dsf[en][PointID]);
+			Enrichdxyzdsf(r,dir,sf[en][PointID],dsf[en][PointID],&det[en][PointID],dxyzsf[en][PointID]);
+			w[en][PointID] = volume * Wi[j];
+			write_element_Hammer(en,PointID,16,r,dir);
+		}
+	}Write_PipeTopo(en);
+
+	for (int j=0;j<8;j++){ // ×îºó°ÑÕâ¸öµ¥ÔªµÄ½áµã¶¼±ê¼Ç£¬ ×¢Òâ£ºÇ°ÃæµÄnode_eÀïÃæ[8][9]ÊÇË®¹Ü½áµã£¬ÏÖÔÚ»»³É¸»¼¯½áµã
+		if (!enrichorder_n[node_e[en][j]])	// ±ê¼Ç¸»¼¯½áµã
+				enrichorder_n[node_e[en][j]] = (enrich_nodenum_c++);	// ½áµã±àºÅ´Ó0¿ªÊ¼
+		node_e[en][j+8] = enrichorder_n[node_e[en][j]];
+	}
 	return PointNum;	// Ğ±´©Çé¿ö£º·Ö³É°üº¬¶¥¡¢Ä©µãµÄÒ»¸ö´óÁùÃæÌå + Èı¸öĞ¡ÁùÃæÌå×é³ÉµÄLĞÍÌå£¬¹²ÆÊ·Ö5¶ÎÇó½â
 }
 

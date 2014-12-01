@@ -6,7 +6,7 @@ using namespace std;
 
 //声明文件指针
 extern FILE *DEBUG;
-extern FILE *inp_node,*inp_element,*inp_material,*inp_loadcase,*inp_table,*inp_set,*inp_pipe,*inp_section,*inp_initial,*inp_surface;
+extern FILE *inp_node,*inp_element,*inp_material,*inp_loadcase,*inp_table,*inp_set,*inp_pipe,*inp_section,*inp_initial,*inp_surface,*inp_cooling;
 extern FILE *log_check;
 extern FILE *out;
 
@@ -34,3 +34,4 @@ extern void KeywordSection(char (*cmd)[500],int num,int id);
 extern void KeywordMaterial(char (*cmd)[500],int num,int* id);
 extern void KeywordSurface(char (*cmd)[500],int num,int* SetId,int* SurfId);
 extern void KeywordTable(char (*cmd)[500],int num,int* id);
+extern void KeywordCooling(char (*cmd)[500],int num);

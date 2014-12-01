@@ -301,7 +301,7 @@ void KeywordTable(char (*cmd)[500],int num,int* id){
 				if (strstr(cmd[i],"name")){	// 参数 name
 					sscanf(cmd[i],"name=%s",&tmp);
 					sprintf(name_tb[*id],"%s",tmp);
-				}else if (strstr(cmd[i],"time")){	// 参数 name
+				}else if (strstr(cmd[i],"time")){	// 参数 time
 					if (strcmp(cmd[i],"time=TOTAL TIME"))	Warning("Only 'time=TOTAL TIME' can be used in this version.");
 				}else{
 					Warning(cmd[i]," is not a parameter in *Amplitude");
@@ -322,5 +322,36 @@ void KeywordTable(char (*cmd)[500],int num,int* id){
 			sscanf(cmd[2*i+1],"%f",&value);		value_tb[*id][startid+i] = value;			
 			fprintf(out," %.2f, %.2f, ",time,value);			
 		}fprintf(out,"\n");
+	}
+}
+int tb_in=0, tb_out=0, tb_flw=0;
+void KeywordCooling(char (*cmd)[500],int num){
+	char tmp[500];	int pipe;
+	if (cmd[0][0]=='*'){	// *Keyword, 即将读入关键字，刚刚读取完数据段
+		if (strstr(cmd[0],"*Cooling")){	// *Cooling
+			for(int i=1;i<num;i++){
+				if (strstr(cmd[i],"inlet")){	// 参数 inlet
+					sscanf(cmd[i],"inlet=%s",&tmp);
+					tb_in  = SearchSetName(tmp,20);
+				}else if (strstr(cmd[i],"outlet")){	// 参数 outlet
+					sscanf(cmd[i],"outlet=%s",&tmp);
+					tb_out = SearchSetName(tmp,20);
+				}else if (strstr(cmd[i],"flow")){	// 参数 flow
+					sscanf(cmd[i],"flow=%s",&tmp);
+					tb_flw = SearchSetName(tmp,20);
+				}else{
+					Warning(cmd[i]," is not a parameter in *Cooling");
+				}
+			}
+		}else{
+			Warning("Keyword ",cmd[0]," should not be included in Cooling.inp definition");
+		}
+	}else{	// 即将读入数据段
+		for(int i=0;i<num;i++){
+			sscanf(cmd[i],"%d",&pipe);	pipe--;
+			TbInlet_p[pipe] = tb_in;
+			TbOutlet_p[pipe] = tb_out;
+			TbFlow_p[pipe] = tb_flw;
+		}
 	}
 }

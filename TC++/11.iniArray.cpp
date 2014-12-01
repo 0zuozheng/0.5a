@@ -7,6 +7,13 @@ void  Alloc2DArray_float(float*** arr,int k1,int k2){
 	}
 }
 
+void Realloc2DArray_float(float ***arr, int k0, int k1, int k2){
+	*arr = (float **)realloc(*arr, (k1)*sizeof(float*));
+	for (int i=k0;i<k1;i++){
+		(*arr)[i] = (float *)calloc(k2,sizeof(float));
+	}
+}
+
 void    Alloc2DArray_int  (int*** arr,int k1,int k2){
 	*arr = (int **)calloc(k1,sizeof(int *));
 	for (int i=0;i<k1;i++){

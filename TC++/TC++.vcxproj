@@ -72,6 +72,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="21.LibraryNormal.cpp" />
+    <ClCompile Include="23.ParameterEnrich.cpp" />
+    <ClCompile Include="24EnrichShapeFunc.cpp" />
     <ClCompile Include="51.Boundary.cpp" />
     <ClCompile Include="40.Assembly.cpp" />
     <ClCompile Include="10.DataRead.cpp" />
@@ -90,6 +92,7 @@
     <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="41.ReadStep.cpp" />
     <ClCompile Include="60.Pipe.cpp" />
+    <ClCompile Include="52.PipeSource.cpp" />
     <ClCompile Include="Result.cpp" />
     <ClCompile Include="50.Solve.cpp" />
     <ClCompile Include="31.Rotate.cpp" />

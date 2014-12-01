@@ -20,7 +20,7 @@ extern FILE *log_answer,*log_check,*out,*inp_step;
 extern int SurfLoadId;
 ofstream tecplot;	// 结果输出文件流
 extern void circular(float XYZ[3],float P1[3],float P2[3],float *r,float d[3]);
-extern void Enrichsf(float x,float y,float z,float r,float *sf_);
+extern void Enrichsf(float xyz[3],float r,float *sf_);
 
 extern void Read_step(FILE*);
 extern void restart_files();
@@ -33,7 +33,7 @@ void FreeAssembly(){
 	FREE2D_float(Q0,elementnum_c);			FREE3D_float(H,elementnum_c,8);
 	FREE3D_float(P,elementnum_c,8);			FREE2D_float(Q3,elementnum_c);
 	
-	FREE2D_int(ColId,nodenum_c);			FREE2D_float(ValueRowCol,nodenum_c);
+	FREE2D_int(ColId,enrich_nodenum_c);		FREE2D_float(ValueRowCol,enrich_nodenum_c);
 	free(NumCols);
 }
 
@@ -90,11 +90,12 @@ void AdjustTable(float time_now,int ptn){
 			Table_step[i][ptn+j] = TimeInter(time,i,j,num_tb[i],time_tb[i],value_tb[i]);
 		}
 	}fprintf(DEBUG,"#### Table for increment=%d time=%f \n",ptn,time_now);
-	for(int i=0;i<tablenum_c;i++){
-		for(int j=0;j<inc_l+ptn;j++){
+	for(int i=0;i<tablenum_c;i++)
+		for(int j=0;j<inc_l+ptn;j++)
 			fprintf(DEBUG,"Inc = %d Value = %f \n",j,Table_step[i][j]);
-		}
-	}
+
+	for (int i=0;i<ppnum_c;i++)	// tem_pp插值
+		tem_pp[i] = (float*)realloc(tem_pp[i],(ptn+inc_l)*sizeof(float));
 }
 
 void PrintElement(int ln,int i){
@@ -125,31 +126,32 @@ void PrintElement(int ln,int i){
 
 void LineSource(int en, int CrossAxis){
 	// 4个积分点方案
-	float LMN_Pipe[3], pLMN[3], tmp, PI = 3.1415926f, r = Rb_p/100.0f;
-	int num = NodeNum_e[en], m = 0, ij[2], k=0;
+	float LMN_Pipe_Center[3], pLMN[3], tmp, PI = 3.1415926f, r = Rb_p/100.0f;
+	int num = NodeNum_e[en], m=0, ij[2], k=0;
 
-	float L = 1.0f;
+	float L = 1.0f; // 管长
 	float fan = (2*PI) * (r*1.2f) / 4.0f ;	// 1.2倍管周长
 	float ww = L * fan;
 	float det_r = (r*1.2f)*2.0f/1.5f; // 积分点位置转换到局部坐标下
-	GetEleXYZ(num, en);	 // 获取结点坐标
+	GetEleXYZ(8, en);	 // 获取结点坐标
 
-	for(int i=0; i<3; i++){
+	for(int i=0; i<3; i++)
 		if(i!=CrossAxis)	ij[k++] = i;
-	}
 	
-	for(int i=0;i<3;i++)
-		LMN_Pipe[i] = 0.5*(LMN_Pipe_e[en][0][i] + LMN_Pipe_e[en][1][i]);
+	for(int i=0; i<3; i++)
+		LMN_Pipe_Center[i] = 0.5*(LMN_Pipe_e[en][0][i] + LMN_Pipe_e[en][1][i]);
 
 	for(int i=0; i<4; i++){
-		float XYZ[3]={0,0,0}, sf_[8], r, dir[3];
-		pLMN[ij[0]] = LMN_Pipe[ij[0]] +((i-2)%2)*det_r; // 预定管结点的局部坐标, 以后还要加上由整体坐标获得局部坐标的程序 zuozuoz
-		pLMN[ij[1]] = LMN_Pipe[ij[1]] +((i-1)%2)*det_r;
-		pLMN[CrossAxis] = LMN_Pipe[CrossAxis];
+		fprintf(DEBUG,"%d\n",i);
+		float XYZ[3]={0,0,0}, sf_[16], r, dir[3];
+		pLMN[ij[0]] = LMN_Pipe_Center[ij[0]] +((i-2)%2)*det_r; // 预定管结点的局部坐标, 以后还要加上由整体坐标获得局部坐标的程序 zuozuoz
+		pLMN[ij[1]] = LMN_Pipe_Center[ij[1]] +((i-1)%2)*det_r;
+		pLMN[CrossAxis] = LMN_Pipe_Center[CrossAxis];
+		fprintf(DEBUG,"=%d\n",i);
 
 		GetXYZ(pLMN, nodeXYZ_e, XYZ);	// 积分点全局坐标
 		circular(XYZ, nodeXYZ_e[8], nodeXYZ_e[9], &r, dir);	// 积分点在柱坐标系下的坐标
-		Enrichsf(pLMN[0], pLMN[1], pLMN[2], r, sf_);
+		Enrichsf(pLMN, r, sf_);
 
 		fprintf(log_bound,"水管积分点 形函数 sf:\n");
 		for (int l=0;l<num;l++)	fprintf(log_bound,"%f\t",sf_[l]);
@@ -164,29 +166,33 @@ void LineSource(int en, int CrossAxis){
 				fprintf(log_bound,"%f\t",tmp);
 			}fprintf(log_bound,"\n");
 		}
+		fprintf(DEBUG,"=%d\n",i);
 	}
 }
 
 void PreTreatment(int ln){ //ln -> loadcase_now
-	for(int i=0;i<nodenum_c;i++) { marked[i]=1;  elements_n[i]=0;  calculate_n[i]=false;}  //marked 标记该结点激活
-	for(int i=0;i<elementnum_c;i++){		
+	for(int i=0;i<enrich_nodenum_c;i++) { marked[i]=1;  elements_n[i]=0;  calculate_n[i]=false;}  //marked 标记该结点激活
+	for(int i=0;i<elementnum_c;i++){
+		int num;
 		if(!deactive_l[i]){	// active -> 单元激活
-			for(int j=0;j<8;j++){
+			if(pipe_e[i])	num = 16;
+			else			num = 8;
+			for(int j=0;j<num;j++){
 				elements_n[node_e[i][j]]++;	calculate_n[node_e[i][j]]=true;
 			}
 			for(int j=0;j<6;j++){
 				if (surf_e[i][j]>0)	Tface(ln,i,j,surf_e[i][j]);	// 面组装
-			}			
+			}
 			if(pipe_e[i])	StiffMatrix_HEX16(i);		// 形成单元刚度矩阵
 			else			StiffMatrix_HEX8(i);		// 形成单元刚度矩阵
-			
+
 			if(pipe_e[i])	LineSource(i, 2);	// 管壁边界条件
 
 			PrintElement(ln,i);
 		}
 	}
-	equationnum=nodenum_c;		int l=0;
-	for(int i=0;i<nodenum_c;i++){
+	equationnum = enrich_nodenum_c;		int l=0;
+	for(int i=0;i<enrich_nodenum_c;i++){
 		if(calculate_n[i]==false) {	equationnum--;	l++;  marked[i]=0; }
 		order[i]=l;
 	}
@@ -214,23 +220,20 @@ void AssignP(int pn){
 }
 
 void Assembly(){		// Called By Main.cpp
-	tecplot.open("tec.dat");
-	char ansname[100];
+	char ansname[100];	tecplot.open("tec.dat");
 	int step = 0, period_totalnow = 0;
 	maxelement_l = elementnum_c;
 
-	time_e = (float*)calloc(elementnum_c,sizeof(int));		deactive_l	= (int*)calloc(elementnum_c,sizeof(int));
-	P  = (float***)calloc(elementnum_c,sizeof(float**));	PP = (float***)calloc(elementnum_c,sizeof(float**));
-	Q0 = (float**)calloc(elementnum_c,sizeof(float*));		H = (float***)calloc(elementnum_c,sizeof(float**));
-	Q3 = (float**)calloc(elementnum_c,sizeof(float*));	
-	calculate_n = (bool*)calloc(nodenum_c,sizeof(bool));	elements_n=(int*)calloc(nodenum_c,sizeof(int));
+	calculate_n = (bool*)calloc(enrich_nodenum_c,sizeof(bool));	elements_n = (int*)calloc(enrich_nodenum_c,sizeof(int));
+	t_n = (float*)calloc(enrich_nodenum_c,sizeof(float));
+	time_e = (float*)calloc(elementnum_c,sizeof(int));			deactive_l	= (int*)calloc(elementnum_c,sizeof(int));
+	P  = (float***)calloc(elementnum_c,sizeof(float**));		PP = (float***)calloc(elementnum_c,sizeof(float**));
+	Q0 = (float**)calloc(elementnum_c,sizeof(float*));			H = (float***)calloc(elementnum_c,sizeof(float**));
+	Q3 = (float**)calloc(elementnum_c,sizeof(float*));
 
-	NumCols     = (int*)calloc(nodenum_c,sizeof(int));
-	Alloc2DArray_int(&ColId,nodenum_c,conn);
-	Alloc2DArray_float(&ValueRowCol,nodenum_c,conn);
-
-	Alloc2DArray_int(&surf_e,elementnum_c,6);
-	Alloc2DArray_float(&Table_step,tablenum_c,1);
+	NumCols     = (int*)calloc(enrich_nodenum_c,sizeof(int));
+	Alloc2DArray_int(&ColId,enrich_nodenum_c,conn);				Alloc2DArray_float(&ValueRowCol,enrich_nodenum_c,conn);
+	Alloc2DArray_int(&surf_e,elementnum_c,6);					Alloc2DArray_float(&Table_step,tablenum_c,1);
 
 	printf("Now Starting Calculation...\n");
 
@@ -239,8 +242,7 @@ void Assembly(){		// Called By Main.cpp
 		Read_step(inp_step);
 		sprintf(ansname,"RESULT %03d(%s).dat",step,name_l);
 		log_answer = fopen(ansname,"w");
-		marked = (int*)calloc(nodenum_c,sizeof(int));
-		order  = (int*)calloc(nodenum_c,sizeof(int));
+		marked = (int*)calloc(enrich_nodenum_c,sizeof(int));		order  = (int*)calloc(enrich_nodenum_c,sizeof(int));
 		Info_step(step);	// 输出信息
 		AdjustTable(time_totalnow,period_totalnow);		// 表格插值
 		PreTreatment(step);

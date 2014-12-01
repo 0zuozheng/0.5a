@@ -7,17 +7,17 @@ extern void FREE3D_int(int*** arr,int num1,int num2);
 extern void FREE3D_float(float*** arr,int num1,int num2);
 extern int *list;
 
-int nodenum_c, elementnum_c, materialnum_c, loadnum_c, fixnum_c, elsetnum_c, nsetnum_c, sectionnum_c, initialnum_c, surfsetnum_c, surfnum_c;//控制参数信息Control
+int nodenum_c, pipe_nodenum_c, enrich_nodenum_c, elementnum_c, materialnum_c, loadnum_c, fixnum_c, elsetnum_c, nsetnum_c, sectionnum_c, initialnum_c, surfsetnum_c, surfnum_c;//控制参数信息Control
 
 float *density_m, **diffusivity_m, *c_m, *rise_m, *m_m, **conduction_m;//材料信息Material
 char **name_m;
 
 float **xyz_n, *t_n;//结点信息Node
+int *enrichorder_n;
 
-int *material_e, **node_e, *class_e, *NodeNum_e, *plan_e, *PointNum_e, ***LMN_Pipe_e;//单元信息Element
-float *t_e;
-int **surf_e;//单元面信息ElementFace
-	
+int *material_e, **node_e, *class_e, *NodeNum_e, *plan_e, *PointNum_e, *pipe_e, **surf_e;//单元信息Element
+float *t_e, ***LMN_Pipe_e;
+
 int boundarynum_c=0,*num_b,**list_b,*table_b;	//边界条件 Boundary
 float *fix_b;
 
@@ -27,8 +27,9 @@ char name_l[500];
 
 int tablenum_c;
 
-int pipenum_c,*pts_p,*pipe_e;
-float ***xyz_p;
+int ppnum_c, pipenum_c; // pipe point num
+float **xyz_pp, **tem_pp;
+int *pts_p, **pId_p, *TbInlet_p, *TbOutlet_p, *TbFlow_p; // 水管条件 Pipe
 
 char **name_elset, **name_nset;		// 组信息 Set
 int *type_elset, **list_elset, *num_elset, *type_nset, **list_nset, *num_nset;
@@ -54,7 +55,7 @@ void Free_Read(){	// 读入之后需要删除掉的变量
 
 void FreeVariables(){	// 程序运行完需要删除掉的变量
 
-	FREE2D_float(xyz_n,nodenum_c);			free(t_n);
+	FREE2D_float(xyz_n, enrich_nodenum_c);			free(t_n);
 	free(material_e);   free(t_e);			FREE2D_int(node_e,elementnum_c);
 	free(plan_e);		free(class_e);		FREE2D_int(surf_e,elementnum_c);
 	free(deactive_l);

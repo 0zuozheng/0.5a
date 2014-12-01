@@ -24,15 +24,16 @@ void OutHead(FILE* out, char* head){
 void Read_Node(FILE *in){	int id;	char tmp[500];	char *p;
 	OutHead(out,"PARTS (Nodes)");
 	fprintf(log_check,"%10s%15s%15s%15s\n","NodeID","X","Y","Z");
-	fscanf (in,"**Node Num =%d\n",&nodenum_c);		RnWinp(in,out,tmp);		// 头两行
+	fscanf (in,"**Node Num =%d\n",&nodenum_c);	RnWinp(in,out,tmp);		// 头两行
+	enrich_nodenum_c = pipe_nodenum_c = nodenum_c;
 
-	Alloc2DArray_float(&xyz_n,nodenum_c,3);		t_n=(float*)calloc(nodenum_c,sizeof(float));
+	Alloc2DArray_float(&xyz_n,nodenum_c,3);	enrichorder_n = (int*)calloc(nodenum_c,sizeof(float));
 
 	for(int i=0;i<nodenum_c;i++){
 		RnWinp(in,out,tmp);		p = strtok(tmp,",");	sscanf(p,"%d",&id);		id--;	//结点号--
 		for(int j=0;j<3;j++){
 			p = strtok(NULL,",");	sscanf(p,"%f",&xyz_n[id][j]);
-		}t_n[i]=10.0;
+		}
 		fprintf(log_check,"%10d%15.3f%15.3f%15.3f\n",id+1,xyz_n[id][0],xyz_n[id][1],xyz_n[id][2]);
 	}fclose(in);
 }
@@ -45,8 +46,8 @@ void Read_Element(FILE *in){	int num,id;	char cmd[10][500], tmp[500];	char* p;
 	KeywordElement(cmd,num,0);	// 解析关键字
 
 	material_e=(int*)calloc(elementnum_c,sizeof(int));		t_e       =(float*)calloc(elementnum_c,sizeof(float));
-	Alloc2DArray_int(&node_e,elementnum_c,8);				Alloc3DArray_int(&LMN_Pipe_e,elementnum_c,2,3);
-	NodeNum_e   =(int*)calloc(elementnum_c,sizeof(int));	PointNum_e = (int*)calloc(elementnum_c,sizeof(int));
+	Alloc2DArray_int(&node_e,elementnum_c,8);				Alloc3DArray_float(&LMN_Pipe_e,elementnum_c,2,3);
+	NodeNum_e =(int*)calloc(elementnum_c,sizeof(int));		PointNum_e = (int*)calloc(elementnum_c,sizeof(int));
 	plan_e = (int*)calloc(elementnum_c,sizeof(int));		pipe_e = (int*)calloc(elementnum_c,sizeof(int));
 
 	for(int i=0;i<elementnum_c;i++){
@@ -54,14 +55,15 @@ void Read_Element(FILE *in){	int num,id;	char cmd[10][500], tmp[500];	char* p;
 		fprintf(log_check,"%5d",id);	id--;	//单元号
 
 		NodeNum_e[id] = 8;		//结点数量（单元类型）
-		plan_e[id]  = 5;		//积分方案,5阶精度
-		pipe_e[id]  = 1;
+		plan_e[id]  = 5;		//积分方案 - 5阶精度
 
-		if(pipe_e[id]==1){
-			node_e[id] = (int*)realloc(node_e[id],10*sizeof(int));
-			node_e[id][8] = 8;
-			node_e[id][9] = 9;
+		if(i==0){
+			pipe_e[id]  = 1;
+			NodeNum_e[id] = 16;
 		}
+
+		if(pipe_e[id])
+			node_e[id] = (int*)realloc(node_e[id],16*sizeof(int));
 
 		for(int j=0;j<8;j++) {
 			p = strtok(NULL,",");	sscanf(p,"%d",&node_e[id][j]);
@@ -153,7 +155,7 @@ void Assign_Section(){
 	for (int i=0;i<sectionnum_c;i++){
 		AssignMaterial(i,material_section[i]);	
 	}
-	fprintf(log_check,"MatID");
+	fprintf(log_check," MatID");
 	for (int i=0;i<elementnum_c;i++){
 		if(i%10==0)	fprintf(log_check,"\n%8d:",i+1);
 		fprintf(log_check,"%8d",material_e[i]+1);
@@ -254,24 +256,59 @@ void Read_Table(FILE* in){	int num,id = -1;	char cmd[10][500];
 	Check_Table();
 }
 
+int Line2str(char* line, char (*cmd)[500]){
+	char *result = NULL;// 最多打断成20段
+	result = strtok(line," ");
+	int count = 0;
+	sprintf(cmd[count],"%s",result);
+	while(result!=NULL){
+		result = strtok(NULL," ");
+		count ++;
+		sprintf(cmd[count],"%s",result);
+	}return count;
+}
+
 void Read_Pipe(FILE *fp){	//读入管线条件
-	int tmp;
-	printf("Reading pipe geometries form Boundary...\n");
+	int tmp;	char cmd[20][500];
+	fscanf(fp,"**Pipe Point Num =%d\n",&ppnum_c);
+	fprintf(log_check,"\n\n#### Pipe Geometry\n Total Pipe Points Number = %d\n",ppnum_c);
+	fscanf(fp,"*Pipe Point\n");
 
-	fscanf(fp,"Pipe Num = %d\n",&pipenum_c);	fprintf(log_check,"\n#### Pipe Geometry\nTotal Pipes Number = %d\n",pipenum_c);
+	Alloc2DArray_float(&xyz_pp, ppnum_c, 3);	Alloc2DArray_float(&tem_pp, ppnum_c, 1);
 
-	pts_p = new int[pipenum_c];					Alloc3DArray_float(&xyz_p,pipenum_c,100,3);
+	for (int i=0; i<ppnum_c; i++){		
+		fscanf(fp,"%d %f %f %f\n",&tmp,&xyz_pp[i][0],&xyz_pp[i][1],&xyz_pp[i][2]);
+		fprintf(log_check,"\t%.3f\t%.3f\t%.3f\n",xyz_pp[i][0],xyz_pp[i][1],xyz_pp[i][2]);
+	}
+
+	fscanf(fp,"**Pipe Segment Num =%d\n",&pipenum_c);
+	fprintf(log_check,"\n Total Pipe Segments Number = %d\n",pipenum_c);
+	fscanf(fp,"*Pipe Segment\n");
+
+	pts_p = (int*)calloc(pipenum_c,sizeof(int));		pId_p = (int**)calloc(pipenum_c,sizeof(int*));		
+	TbInlet_p = (int*)calloc(pipenum_c,sizeof(int*));	TbOutlet_p = (int*)calloc(pipenum_c,sizeof(int*));	TbFlow_p  = (int*)calloc(pipenum_c,sizeof(int*));
 
 	for (int i=0;i<pipenum_c;i++){
-		fscanf(fp,"* Pipe No.%d\n",&tmp);
-		fscanf(fp,"** Points =%d\n",&pts_p[i]);		fprintf(log_check,"Pipe No.%d\n",i);
-		for (int j=0;j<pts_p[i];j++){
-			for (int k=0;k<3;k++){
-				fscanf(fp,"%f",&xyz_p[i][j][k]);
-			}fscanf(fp,"\n");
-			fprintf(log_check,"%.3f\t%.3f\t%.3f\n",xyz_p[i][j][0],xyz_p[i][j][1],xyz_p[i][j][2]);
-		}
-	}fclose(fp);
+		char line[500];
+		fgets(line, 500, fp);
+		int num = Line2str(line, cmd);
+		pts_p[i] = num-1;
+		pId_p[i] = (int*)calloc(num-1,sizeof(int));
+		fprintf(log_check," Pipe Segment No.%d has a total of %d points.\n",i+1,num-1);
+		for(int j=1;j<num;j++){
+			pId_p[i][j-1] = atoi(cmd[j])-1;
+			fprintf(log_check,"\t%d", pId_p[i][j-1]+1);
+		}fprintf(log_check,"\n");
+	}
+	fclose(fp);
+}
+
+void Read_Cooling(FILE *fp){	char cmd[20][500];	int num;
+	OutHead(out,"ADDITIONAL NODES (PIPE)");
+	while(!feof(fp)){
+		LineExtract(fp,cmd,&num);
+		KeywordCooling(cmd,num);
+	}
 }
 
 void ReadData(){
@@ -285,9 +322,10 @@ void ReadData(){
 	welcome();
 	printf(" *Reading surface...\n");	Read_Surface(inp_surface);
 	printf(" *Reading table ...\n");	Read_Table(inp_table);
-	printf(" *Reading initial condition...\n");	Read_Initial(inp_initial);
+	printf(" *Reading initial condition ...\n");	Read_Initial(inp_initial);
 //	printf(" *Reading result ...\n");	Read_Result();	//读取结果输出信息
-//	printf(" *Reading pipe ...\n");		Read_Pipe(inp_pipe);
+	printf(" *Reading pipe information ...\n");		Read_Pipe(inp_pipe);
+	printf(" *Reading cooling condition ...\n");	Read_Cooling(inp_cooling);
 	Free_Read();
 	printf("Reading model data Finished!\n\n");
 }

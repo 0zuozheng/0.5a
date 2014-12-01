@@ -3,15 +3,13 @@
 ************
 *Node
 1, 0, 0, 0
-2, 1, 0, 0
-3, 1, 0, 1
-4, 0, 0, 1
+2, 1.5, 0, 0
+3, 1.5, 0, 1.5
+4, 0, 0, 1.5
 5, 0, 1, 0
-6, 1, 1, 0
-7, 1, 1, 1
-8, 0, 1, 1
-9, 0.5, 1,0.5
-10,0.5, 0,0.5 
+6, 1.5, 1, 0
+7, 1.5, 1, 1.5
+8, 0, 1, 1.5
 ************
 ** PARTS (Elements)
 ************
@@ -34,11 +32,11 @@
 ************
 *Material, name=Material-1
 *Conductivity
-270.00, 270.00, 
+185.00, 185.00, 
 *Density
-2700.00, 2700.00, 
+2663.00, 2663.00, 
 *Specific Heat
-1.00, 
+0.94, 
 ************
 ** Assigning Material
 ************
@@ -54,8 +52,34 @@ _Surf-1_S4, S4
 ************
 *Amplitude, name=Amp-1, time=TOTALTIME
  0.00, 10.00,  2000.00, 10.00, 
+*Amplitude, name=Amp-2, time=TOTALTIME
+ 0.00, 4.00,  2000.00, 4.00, 
 ************
 ** INITIAL CONDITION
 ************
 *Initial Conditions, type=TEMPERATURE
-NSet-1, 10.000000
+NSet-1, 20.000000
+************
+** ADDITIONAL NODES (PIPE)
+************
+*Node
+9 , 0.75 , 1.00 , 0.75 
+10 , 0.75 , 0.00 , 0.75 
+**----------------------------------------------------------------
+**
+**STEP:Step-Deact
+**
+*Step, name=Step-2, inc=1000000
+*Heat Transfer, end=PERIOD
+1., 100., , ,
+**
+**INTERACTIONS
+**
+**Interaction:Int-1
+**
+**OUTPUT REQUESTS
+**
+*Restart, write, frequency=0
+*Output ,field ,variable=PRESELECT
+*Output ,history ,frequency=0
+*End Step

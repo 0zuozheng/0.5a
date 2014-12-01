@@ -1,8 +1,8 @@
 **Material Num = 1
 *Material, name=Material-1
 *Conductivity
-270.,
+185.,
 *Density
-2700.,
+2663.,
 *Specific Heat
-1.0,
+0.943,

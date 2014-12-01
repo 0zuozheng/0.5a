@@ -11,7 +11,7 @@ float nodeXYZ_e[10][3], jacobi[3][3], divjacobi[3][3], **w, **det, ***sf, ****ds
 void GetEleXYZ(int nodenum,int en){ //en -> element_now;	该子程序只计算当前单元的Node信息，每次调用都重置一遍
 	for(int i=0;i<nodenum;i++){
 		int k = node_e[en][i];	//获取结点号
-		for(int j=0;j<3;j++)	nodeXYZ_e[i][j]=xyz_n[k][j];	//获取结点坐标，赋予nodexyz_e
+		for(int j=0;j<3;j++)	nodeXYZ_e[i][j] = xyz_n[k][j];	//获取结点坐标，赋予nodexyz_e
 	}
 }
 
@@ -91,4 +91,17 @@ void ElementAnalysis(){	// Called by Main.cpp
 		else			ShapeFunc_normal(i);
 	}
 	fclose(log_N);
+}
+
+void FreeShape(){
+	int GaussNum=8;
+	for(int i=0;i<elementnum_c;i++){
+		GaussNum = plan_e[i]%1000;
+		free(det[i]);
+		FREE2D_float(sf[i],GaussNum);
+		FREE3D_float(dsf[i],GaussNum,3);
+		FREE3D_float(dxyzsf[i],GaussNum,3);
+	}
+	free(det);	free(sf);
+	free(dsf);	free(dxyzsf);
 }

@@ -1,5 +1,7 @@
-Pipe Num = 1
-* Pipe No.1
-** Points = 2
-0.0 1.25 1.25
-5.0 1.25 1.25
+**Pipe Point Num = 2
+*Pipe Point
+1 0.0 1.25 1.25
+2 5.0 1.25 1.25
+**Pipe Segment Num = 1
+*Pipe Segment
+1 1 2

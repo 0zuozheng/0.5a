@@ -4,7 +4,6 @@
 *
 * * * * * * * * * * * * * * * * * */
 #include "ELEMENT.h"
-extern void N_Hammer(int en, int order, int GaussNum, float Qi[][3], int CrossFace);
 
 void write_element(int en, int in, int classnum){
 	fprintf(log_N,"\n\tGauss Point [%d]\n",in);
@@ -47,17 +46,4 @@ void ShapeFunc_normal(int en){
 	if (plan_e[en]==3)	N_Gauss(en,PointNum_e[en],i3x3x3_);	// 3阶精度
 	if (plan_e[en]==4)	N_Gauss(en,PointNum_e[en],i4x4x4_);	// 4阶精度
 	if (plan_e[en]==5)	N_Gauss(en,PointNum_e[en],i5x5x5_);	// 5阶精度
-}
-
-void FreeShape(){
-	int GaussNum=8;
-	for(int i=0;i<elementnum_c;i++){
-		GaussNum = plan_e[i]%1000;
-		free(det[i]);
-		FREE2D_float(sf[i],GaussNum);
-		FREE3D_float(dsf[i],GaussNum,3);
-		FREE3D_float(dxyzsf[i],GaussNum,3);
-	}
-	free(det);	free(sf);
-	free(dsf);	free(dxyzsf);
 }

@@ -102,9 +102,3 @@ void IntegratePlan(){ // 对各种积分方案的常数预先处理
 	for(int i=0;i<35;i++)
 		fprintf(DEBUG,"w = %f, i = [%f %f %f %f]\n",tw5xw5[i],ti5xi5[i][0],ti5xi5[i][1],ti5xi5[i][2],ti5xi5[i][3]);
 }
-
-void AxisPlan(){
-	Axis_Of_Face[12]=2;	// Z axis
-	Axis_Of_Face[35]=1;	// Y axis
-	Axis_Of_Face[46]=0;	// X axis
-}

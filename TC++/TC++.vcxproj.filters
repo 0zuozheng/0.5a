@@ -98,6 +98,15 @@
     <ClCompile Include="60.Pipe.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="52.PipeSource.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="23.ParameterEnrich.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="24EnrichShapeFunc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Construct.h">

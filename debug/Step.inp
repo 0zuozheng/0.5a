@@ -4,7 +4,7 @@
 ** 
 *Step, name=Step-2, inc=1000000
 *Heat Transfer, end=PERIOD
-1., 300., , , 
+1., 100., , , 
 ** 
 ** INTERACTIONS
 ** 

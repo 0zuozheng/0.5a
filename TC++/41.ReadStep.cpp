@@ -14,7 +14,7 @@ void deactivate(char* elset){
 	for (int i=0;i<len;i++){
 		deactive_l[list[i]] = 1;
 		fprintf(DEBUG,"\t%d",list[i]+1);
-	}fprintf(DEBUG,"\n");	
+	}fprintf(DEBUG,"\n");
 }
 
 void activate(char* elset){
@@ -24,7 +24,7 @@ void activate(char* elset){
 	for (int i=0;i<len;i++){
 		deactive_l[list[i]] = 0;
 		fprintf(DEBUG,"\t%d",list[i]+1);
-	}fprintf(DEBUG,"\n");	
+	}fprintf(DEBUG,"\n");
 }
 
 void Sfilm(int setid,int load,float beta,int TableId){
@@ -42,6 +42,10 @@ void Sfilm(int setid,int load,float beta,int TableId){
 		int f = facelist_surf[setid][i];
 		surf_e[e][f] = load;
 	}
+}
+
+void Cooling(int PipeId){
+	
 }
 
 void FixBoundary(int FixId, int nodeset, float fixT, int TableId){
