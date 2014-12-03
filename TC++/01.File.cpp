@@ -1,17 +1,26 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *		FILE Pointer Declaration
+ *
+ *	 Author:          Z Zuo
+ *   Last Modified :  Dec. 2014
+ *  
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
 #include <stdio.h>
-#include <fstream>
-using namespace std;
+extern char *DTFS, *Prog_Version, *Solver_Version, *Dev_Version, *Copy_Right;
 
-FILE *log_answer, *log_solver, *log_element, *log_N, *log_check, *log_transform, *log_bound, *log_enrich;	//数据输出校核文件流
-FILE *inp_material, *inp_element, *inp_node, *inp_pipe, *inp_loadcase, *inp_table, *inp_set, *inp_section, *inp_initial, *inp_surface, *inp_step, *inp_cooling;	//数据输入文件流
-FILE *out;
-FILE *DEBUG;
+/* Log FILE Pointer */
+FILE *log_answer, *log_solver, *log_element, *log_N, *log_check, *log_transform, *log_bound, *log_enrich;
 
-extern char* DTFS;
-extern char *Prog_Version,*Solver_Version,*Dev_Version,*Copy_Right,*DTFS;
+/* Input FILE Pointer */
+FILE *inp_material, *inp_element, *inp_node, *inp_pipe, *inp_loadcase, *inp_table, *inp_set, *inp_section, *inp_initial, *inp_surface, *inp_step, *inp_cooling;
 
+/* Output FILE Pointer */
+FILE *out;			FILE *DEBUG;
+
+/* Open FILE Pointer, called by main()... */
 void File(){
-	/* Log File */
 	log_solver = fopen("Solver.log","w");
 	fprintf(log_solver,"%s\n*** This log file includes the A,B and X of the linear equations in each increment.\n\n",DTFS);
 
@@ -25,15 +34,15 @@ void File(){
 	fprintf(log_N,"%s\n*** This log file includes the shape function matrix.\n\n",DTFS);
 
 	log_enrich = fopen("Enrich.inp","w");
+	fprintf(log_N,"*** This log file includes the model that contains pipe nodes and integration points.\n\n");
 
 	log_bound = fopen("Bound.log","w");
-	fprintf(log_bound,"%s\n*** This log file includes the shape function matrix.\n\n",DTFS);
+	fprintf(log_bound,"%s\n*** This log file includes the boundary condition.\n\n",DTFS);
 
 	log_check = fopen("CheckDAT.log","w");
-	fprintf(log_check,"%s\n\n",DTFS);
-	fprintf(log_check,"%s\n%s\n%s\n%s\n",Prog_Version,Solver_Version,Dev_Version,Copy_Right);
+	fprintf(log_check,"%s\n\n%s\n%s\n%s\n%s\n",DTFS,Prog_Version,Solver_Version,Dev_Version,Copy_Right);
 
-	/* Input File */
+	/* Input File Pointer */
 	inp_material    = fopen("Material.inp","r");
 	inp_node        = fopen("Node.inp","r");
 	inp_element     = fopen("Element.inp","r");
@@ -50,12 +59,13 @@ void File(){
 	/* Output Job.inp file for abaqus */
 	out				= fopen("Job.inp","w");
 
-	/* Debug File */
+	/* Debug File, which can be called everywhere in this program... */
 	DEBUG = fopen("Debug.log","w");
 }
 
+/* Restart FILE Pointer when another calc step begins... */
 void restart_files(){
-	fclose(out);				out	= fopen("Job.inp","a");
+	fclose(out);				out	= fopen("Job.inp","a");	// Format = "Additional"
 	fclose(log_check);			log_check = fopen("CheckDAT.log","a");
 	fclose(DEBUG);				DEBUG = fopen("Debug.log","a");
 	fclose(log_solver);			log_solver = fopen("Solver.log","a");
@@ -63,13 +73,9 @@ void restart_files(){
 	fclose(log_transform);		log_transform = fopen("Transform.log","a");
 }
 
+/* Close all FILE Pointers ... */
 void close_files(){
-	printf("\n***************\n*\n*    Mission Complete!\n*\n***************\n");
-	fclose(inp_step);
-	fclose(log_check);
-	fclose(DEBUG);
-	fclose(log_solver);
-	fclose(log_element);
-	fclose(log_transform);
-	fclose(out);
+	printf("\n***************\n*\n*    Mission Complete!\n*\n***************\n");	
+	fclose(log_check);	fclose(log_solver);	fclose(log_element);	fclose(log_transform);
+	fclose(inp_step);	fclose(DEBUG);		fclose(out);
 }

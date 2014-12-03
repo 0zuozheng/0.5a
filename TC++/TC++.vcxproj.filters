@@ -9,6 +9,9 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
+    <Filter Include="AbqPDF">
+      <UniqueIdentifier>{b251af98-b8ae-4653-ac1e-68a98ca86366}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -47,9 +50,6 @@
     <ClCompile Include="51.Boundary.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="42.StiffMatrix.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="30.GeometryAnalysis.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -60,9 +60,6 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="32.Judge.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="43.TFace.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="33.Interpolate.cpp">
@@ -98,13 +95,25 @@
     <ClCompile Include="60.Pipe.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="52.PipeSource.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="23.ParameterEnrich.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="24EnrichShapeFunc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="44.TFace.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="43.StiffMatrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="42.PreTreatment.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="46.LineSource.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="52.PipeBoundary.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -138,5 +147,16 @@
     <Library Include="C:\Program Files (x86)\VNI\imsl\cnl700\winms800i32\lib\imslcmath_imsl_dll.lib">
       <Filter>源文件</Filter>
     </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AbqPDF\NSET.pdf">
+      <Filter>AbqPDF</Filter>
+    </None>
+    <None Include="AbqPDF\ELSET.pdf">
+      <Filter>AbqPDF</Filter>
+    </None>
+    <None Include="AbqPDF\3dElement.pdf">
+      <Filter>AbqPDF</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -60,7 +60,7 @@ _Surf-1_S4, S4
 *Initial Conditions, type=TEMPERATURE
 NSet-1, 20.000000
 ************
-** ADDITIONAL NODES (PIPE)
+** Cooling Condition
 ************
 *Node
 9 , 0.75 , 1.00 , 0.75 

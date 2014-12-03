@@ -74,13 +74,15 @@
     <ClCompile Include="21.LibraryNormal.cpp" />
     <ClCompile Include="23.ParameterEnrich.cpp" />
     <ClCompile Include="24EnrichShapeFunc.cpp" />
+    <ClCompile Include="42.PreTreatment.cpp" />
+    <ClCompile Include="46.LineSource.cpp" />
     <ClCompile Include="51.Boundary.cpp" />
     <ClCompile Include="40.Assembly.cpp" />
     <ClCompile Include="10.DataRead.cpp" />
     <ClCompile Include="20.ElementAnalysis.cpp" />
     <ClCompile Include="01.File.cpp" />
     <ClCompile Include="25.ElementParameter.cpp" />
-    <ClCompile Include="42.StiffMatrix.cpp" />
+    <ClCompile Include="43.StiffMatrix.cpp" />
     <ClCompile Include="11.iniArray.cpp" />
     <ClCompile Include="32.Judge.cpp" />
     <ClCompile Include="33.Interpolate.cpp" />
@@ -92,12 +94,12 @@
     <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="41.ReadStep.cpp" />
     <ClCompile Include="60.Pipe.cpp" />
-    <ClCompile Include="52.PipeSource.cpp" />
+    <ClCompile Include="52.PipeBoundary.cpp" />
     <ClCompile Include="Result.cpp" />
     <ClCompile Include="50.Solve.cpp" />
     <ClCompile Include="31.Rotate.cpp" />
     <ClCompile Include="70.Tecplot.cpp" />
-    <ClCompile Include="43.TFace.cpp" />
+    <ClCompile Include="44.TFace.cpp" />
     <ClCompile Include="Tool.cpp" />
     <ClCompile Include="02.Variable.cpp" />
     <ClCompile Include="00.Version.cpp" />
@@ -116,6 +118,11 @@
   </ItemGroup>
   <ItemGroup>
     <Library Include="C:\Program Files (x86)\VNI\imsl\cnl700\winms800i32\lib\imslcmath_imsl_dll.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AbqPDF\3dElement.pdf" />
+    <None Include="AbqPDF\ELSET.pdf" />
+    <None Include="AbqPDF\NSET.pdf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

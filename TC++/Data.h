@@ -22,7 +22,7 @@ extern int boundarynum_c,*num_b,**list_b,*table_b;
 extern float *fix_b;
 
 //工况信息 Loadcase
-extern int incnum_c,inc_l, *deactive_l, maxelement_l;
+extern int inc_l, *deactive_l, maxelement_l;
 extern float timeinc_l, totaltime_l;
 extern char name_l[500];
 

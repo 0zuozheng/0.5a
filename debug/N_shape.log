@@ -13,6 +13,8 @@
 
 *** This log file includes the shape function matrix.
 
+*** This log file includes the model that contains pipe nodes and integration points.
+
 
 *********  Hammer Point [0]  *********
 Location£ºx =  0.7500, y =  0.9531, z =  1.2500

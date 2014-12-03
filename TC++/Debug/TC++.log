@@ -1,22 +1,22 @@
-﻿生成启动时间为 2014/12/1 10:22:39。
+﻿生成启动时间为 2014/12/3 18:58:37。
      1>项目“E:\00.DTFS\3D_prog\v0.5a - Developing\TC++\TC++.vcxproj”在节点 2 上(rebuild 个目标)。
      1>_PrepareForClean:
          正在删除文件“Debug\TC++.lastbuildstate”。
        InitializeBuildStatus:
          正在对“Debug\TC++.unsuccessfulbuild”执行 Touch 任务。
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _CRT_SECURE_NO_DEPRECATE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt 21.LibraryNormal.cpp 23.ParameterEnrich.cpp 24EnrichShapeFunc.cpp 51.Boundary.cpp 40.Assembly.cpp 10.DataRead.cpp 20.ElementAnalysis.cpp 01.File.cpp 25.ElementParameter.cpp 42.StiffMatrix.cpp 11.iniArray.cpp 32.Judge.cpp 33.Interpolate.cpp 12.Assign.cpp 13.Keyword.cpp 22.LibraryEnrich.cpp Main.cpp 30.GeometryAnalysis.cpp Matrix.cpp 41.ReadStep.cpp 60.Pipe.cpp 52.PipeSource.cpp Result.cpp 50.Solve.cpp 31.Rotate.cpp 70.Tecplot.cpp 43.TFace.cpp Tool.cpp 02.Variable.cpp 00.Version.cpp 14.Warning.cpp 71.Write.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _CRT_SECURE_NO_DEPRECATE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt 21.LibraryNormal.cpp 23.ParameterEnrich.cpp 24EnrichShapeFunc.cpp 42.PreTreatment.cpp 46.LineSource.cpp 51.Boundary.cpp 40.Assembly.cpp 10.DataRead.cpp 20.ElementAnalysis.cpp 01.File.cpp 25.ElementParameter.cpp 43.StiffMatrix.cpp 11.iniArray.cpp 32.Judge.cpp 33.Interpolate.cpp 12.Assign.cpp 13.Keyword.cpp 22.LibraryEnrich.cpp Main.cpp 30.GeometryAnalysis.cpp Matrix.cpp 41.ReadStep.cpp 60.Pipe.cpp 52.PipeBoundary.cpp Result.cpp 50.Solve.cpp 31.Rotate.cpp 70.Tecplot.cpp 44.TFace.cpp Tool.cpp 02.Variable.cpp 00.Version.cpp 14.Warning.cpp 71.Write.cpp
          71.Write.cpp
          14.Warning.cpp
          00.Version.cpp
          02.Variable.cpp
          Tool.cpp
-         43.TFace.cpp
+         44.TFace.cpp
          70.Tecplot.cpp
          31.Rotate.cpp
          50.Solve.cpp
          Result.cpp
-         52.PipeSource.cpp
+         52.PipeBoundary.cpp
          60.Pipe.cpp
          41.ReadStep.cpp
          Matrix.cpp
@@ -24,40 +24,44 @@
          Main.cpp
          22.LibraryEnrich.cpp
          13.Keyword.cpp
-     1>e:\00.dtfs\3d_prog\v0.5a - developing\tc++\13.keyword.cpp(13): warning C4018: “<”: 有符号/无符号不匹配
+     1>e:\00.dtfs\3d_prog\v0.5a - developing\tc++\13.keyword.cpp(23): warning C4018: “<”: 有符号/无符号不匹配
          12.Assign.cpp
          33.Interpolate.cpp
          正在生成代码...
          正在编译...
          32.Judge.cpp
          11.iniArray.cpp
-         42.StiffMatrix.cpp
+         43.StiffMatrix.cpp
          25.ElementParameter.cpp
          01.File.cpp
          20.ElementAnalysis.cpp
          10.DataRead.cpp
-     1>e:\00.dtfs\3d_prog\v0.5a - developing\tc++\10.dataread.cpp(143): warning C4305: “=”: 从“double”到“float”截断
+     1>e:\00.dtfs\3d_prog\v0.5a - developing\tc++\10.dataread.cpp(152): warning C4305: “=”: 从“double”到“float”截断
          40.Assembly.cpp
-     1>e:\00.dtfs\3d_prog\v0.5a - developing\tc++\40.assembly.cpp(142): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
          51.Boundary.cpp
+         46.LineSource.cpp
+     1>e:\00.dtfs\3d_prog\v0.5a - developing\tc++\46.linesource.cpp(19): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+         42.PreTreatment.cpp
          24EnrichShapeFunc.cpp
      1>e:\00.dtfs\3d_prog\v0.5a - developing\tc++\24enrichshapefunc.cpp(7): warning C4305: “初始化”: 从“double”到“float”截断
      1>e:\00.dtfs\3d_prog\v0.5a - developing\tc++\24enrichshapefunc.cpp(35): warning C4305: “初始化”: 从“double”到“float”截断
          23.ParameterEnrich.cpp
          21.LibraryNormal.cpp
          正在生成代码...
-     1>e:\00.dtfs\3d_prog\v0.5a - developing\tc++\40.assembly.cpp(83): warning C4715: “TimeInter”: 不是所有的控件路径都返回值
+     1>e:\00.dtfs\3d_prog\v0.5a - developing\tc++\40.assembly.cpp(79): warning C4715: “TimeInter”: 不是所有的控件路径都返回值
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\00.DTFS\3D_prog\v0.5a - Developing\Debug\TC++.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\TC++.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\00.DTFS\3D_prog\v0.5a - Developing\Debug\TC++.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\00.DTFS\3D_prog\v0.5a - Developing\Debug\TC++.lib" /MACHINE:X86 Debug\21.LibraryNormal.obj
          Debug\23.ParameterEnrich.obj
          Debug\24EnrichShapeFunc.obj
+         Debug\42.PreTreatment.obj
+         Debug\46.LineSource.obj
          Debug\51.Boundary.obj
          Debug\40.Assembly.obj
          Debug\10.DataRead.obj
          Debug\20.ElementAnalysis.obj
          Debug\01.File.obj
          Debug\25.ElementParameter.obj
-         Debug\42.StiffMatrix.obj
+         Debug\43.StiffMatrix.obj
          Debug\11.iniArray.obj
          Debug\32.Judge.obj
          Debug\33.Interpolate.obj
@@ -69,12 +73,12 @@
          Debug\Matrix.obj
          Debug\41.ReadStep.obj
          Debug\60.Pipe.obj
-         Debug\52.PipeSource.obj
+         Debug\52.PipeBoundary.obj
          Debug\Result.obj
          Debug\50.Solve.obj
          Debug\31.Rotate.obj
          Debug\70.Tecplot.obj
-         Debug\43.TFace.obj
+         Debug\44.TFace.obj
          Debug\Tool.obj
          Debug\02.Variable.obj
          Debug\00.Version.obj
@@ -91,4 +95,4 @@
 
 生成成功。
 
-已用时间 00:00:05.92
+已用时间 00:00:06.28

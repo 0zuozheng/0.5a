@@ -12,7 +12,7 @@
 
 
 
-DTFS 0.4b, Feb 27, 2014
+DTFS 0.5a, Dec 2, 2014
 IMSL 7.00 32-bits
 Visual Studio 2010
 (c) COPYRIGHT 2014 Tsinghua University Damlab, all rights reserved
@@ -105,7 +105,7 @@ Elements Temperature
  Pipe Segment No.1 has a total of 2 points.
 	1	2
 
-#### ADDITIONAL NODES (PIPE) Information
+#### Cooling Condition Information
 ----------------------------------------
 #### Step 1 
 

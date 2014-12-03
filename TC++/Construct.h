@@ -25,3 +25,5 @@ void Tface(int ln, int en, int face, int boundarynum);
 void Tstep(int ln,int ptn,int pn,float dt);
 extern void StiffMatrix_HEX8(int);
 extern void StiffMatrix_HEX16(int);
+extern void circular(float XYZ[3],float P1[3],float P2[3],float *r,float d[3]);
+extern void Enrichsf(float xyz[3],float r,float *sf_);

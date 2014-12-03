@@ -11,7 +11,7 @@
 
 
 
-*** This log file includes the shape function matrix.
+*** This log file includes the boundary condition.
 
 水管积分点 形函数 sf:
 0.126680	0.126680	0.123320	0.123320	0.126680	0.126680	0.123320	0.123320	-0.117315	-0.117315	-0.114204	-0.114204	-0.117315	-0.117315	-0.114204	-0.114204	
@@ -1766,4 +1766,4 @@ Q_Right [7] : -1.277757
 Q_Right [8] : 1.183299
 Q_Right [9] : 1.183299
 Q_Right [10] : 1.183299
-Q_Right [11] 
+Q_Right [11] : 1
